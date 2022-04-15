@@ -4,6 +4,16 @@
   margin: 0 auto;
 }
 
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
 img {
   display: block;
   max-width: 100%;

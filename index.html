@@ -12,6 +12,16 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&family=Poppins:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <!-- link to fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/c6524fac39.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- link to dev icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <!-- link to stylesheet -->
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
@@ -19,9 +29,9 @@
     <header>
       <nav>
         <ul class="wrapper">
-          <li><a href="./about">About</a></li>
-          <li><a href="./portfolio">Portfolio</a></li>
-          <li><a href="./contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="wrapper">
@@ -30,9 +40,222 @@
             I'm <span class="name">Madalina</span>
             <span class="capitalize">Front End Developer</span>
           </h1>
-          <a href="./portfolio" class="btn">View my work</a>
+          <a href="#portfolio" class="btn">View my work</a>
         </div>
       </div>
     </header>
+    <main>
+      <section class="about" id="about">
+        <div class="wrapper">
+          <div class="flexContainer">
+            <div class="imgContainer">
+              <img
+                src="http://placekitten.com/400/400"
+                alt="A photo of Madalina"
+              />
+            </div>
+            <div class="textContainer">
+              <h2>About me</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                repellat totam sint ducimus et, pariatur perferendis sunt
+                possimus nulla accusamus vitae molestiae cum earum atque
+                voluptatibus. Praesentium cum vitae blanditiis ut facilis, iure
+                repellat deserunt suscipit nihil at beatae recusandae quae fugit
+                reiciendis quidem magni ea veniam quo nam voluptatum.
+              </p>
+              <div class="interests">
+                <h3>My interests</h3>
+                <div class="flexContainer">
+                  <div class="iconContainer">
+                    <span class="sr-only">Hiking</span>
+                    <i class="fa-solid fa-person-hiking" aria-hidden="true"></i>
+                  </div>
+                  <div class="iconContainer">
+                    <span class="sr-only">Skating</span>
+                    <i class="fa-solid fa-music" aria-hidden="true"></i>
+                  </div>
+                  <div class="iconContainer">
+                    <span class="sr-only">Coffee</span>
+                    <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="skills">
+        <div class="wrapper">
+          <h2>Skills & Tools</h2>
+          <ul class="skillsList flexContainer">
+            <li class="iconContainer">
+              <i class="devicon-html5-plain" aria-hidden="true"></i>
+              <p>Html</p>
+            </li>
+            <li class="iconContainer">
+              <i class="devicon-css3-plain" aria-hidden="true"></i>
+              <p>Css3</p>
+            </li>
+            <li class="iconContainer">
+              <i class="devicon-javascript-plain" aria-hidden="true"></i>
+              <p>JavaScript</p>
+            </li>
+            <li class="iconContainer">
+              <i class="devicon-jquery-plain" aria-hidden="true"></i>
+              <p>jQuery</p>
+            </li>
+            <li class="iconContainer">
+              <i class="devicon-sass-plain" aria-hidden="true"></i>
+              <p>Sass</p>
+            </li>
+            <li class="iconContainer">
+              <i class="devicon-react-plain" aria-hidden="true"></i>
+              <p>React</p>
+            </li>
+            <li class="iconContainer">
+              <i class="fa-solid fa-gears" aria-hidden="true"></i>
+              <p>REST APIs</p>
+            </li>
+            <li class="iconContainer">
+              <i class="devicon-git-plain" aria-hidden="true"></i>
+              <p>Git</p>
+            </li>
+            <li class="iconContainer">
+              <i class="devicon-terminal-plain" aria-hidden="true"></i>
+              <p>Terminal</p>
+            </li>
+            <li class="iconContainer">
+              <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+              <p>Accessibility</p>
+            </li>
+            <li class="iconContainer">
+              <i
+                class="fa-solid fa-mobile-screen-button"
+                aria-hidden="true"
+              ></i>
+              <p>Responsive</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="portfolio" id="portfolio">
+        <div class="wrapper">
+          <h2>Projects</h2>
+          <div class="projectContainer flexContainer">
+            <div class="textContainer">
+              <h3>BeachStays</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+                dolorem unde, quos cum molestiae ipsam.
+              </p>
+              <div class="iconsContainer">
+                <span class="sr-only">Made with</span>
+                <ul class="projectIcon flexContainer">
+                  <li class="iconContainer">
+                    <span class="sr-only">Html</span>
+                    <i class="devicon-html5-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer">
+                    <span class="sr-only">Sass</span>
+                    <i class="devicon-sass-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer">
+                    <span class="sr-only">Responsive</span>
+                    <i
+                      class="fa-solid fa-mobile-screen-button"
+                      aria-hidden="true"
+                    ></i>
+                  </li>
+                </ul>
+              </div>
+              <div class="projectLinks">
+                <a href="">Live site</a>
+                <span> || </span>
+                <a href="">GitHub</a>
+              </div>
+            </div>
+            <div class="imgContainer">
+              <img src="./assets/furniture.png" alt="" />
+            </div>
+          </div>
+          <div class="projectContainer flexContainer reverse">
+            <div class="textContainer">
+              <h3>BeachStays</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+                dolorem unde, quos cum molestiae ipsam.
+              </p>
+              <div class="iconsContainer">
+                <span class="sr-only">Made with</span>
+                <ul class="projectIcon flexContainer">
+                  <li class="iconContainer">
+                    <span class="sr-only">Html</span>
+                    <i class="devicon-html5-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer">
+                    <span class="sr-only">Sass</span>
+                    <i class="devicon-sass-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer">
+                    <span class="sr-only">Responsive</span>
+                    <i
+                      class="fa-solid fa-mobile-screen-button"
+                      aria-hidden="true"
+                    ></i>
+                  </li>
+                </ul>
+              </div>
+              <div class="projectLinks">
+                <a href="">Live site</a>
+                <span> || </span>
+                <a href="">GitHub</a>
+              </div>
+            </div>
+            <div class="imgContainer">
+              <img src="./assets/furniture.png" alt="" />
+            </div>
+          </div>
+          <div class="projectContainer flexContainer">
+            <div class="textContainer">
+              <h3>BeachStays</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+                dolorem unde, quos cum molestiae ipsam.
+              </p>
+              <div class="iconsContainer">
+                <span class="sr-only">Made with</span>
+                <ul class="projectIcon flexContainer">
+                  <li class="iconContainer">
+                    <span class="sr-only">Html</span>
+                    <i class="devicon-html5-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer">
+                    <span class="sr-only">Sass</span>
+                    <i class="devicon-sass-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer">
+                    <span class="sr-only">Responsive</span>
+                    <i
+                      class="fa-solid fa-mobile-screen-button"
+                      aria-hidden="true"
+                    ></i>
+                  </li>
+                </ul>
+              </div>
+              <div class="projectLinks">
+                <a href="">Live site</a>
+                <span> || </span>
+                <a href="">GitHub</a>
+              </div>
+            </div>
+            <div class="imgContainer">
+              <img src="./assets/furniture.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="contact"></footer>
   </body>
 </html>

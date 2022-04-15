@@ -310,6 +310,25 @@ p {
   margin: 0 auto;
 }
 
+.flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -369,7 +388,6 @@ header .title .capitalize {
 }
 header .btn {
   font-size: 0.8rem;
-  text-transform: uppercase;
   color: #495057;
   font-weight: 500;
   margin-top: 50px;
