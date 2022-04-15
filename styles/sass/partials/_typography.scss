@@ -20,6 +20,19 @@ input {
   padding: 0;
 }
 
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  color: $secondary;
+  letter-spacing: 2px;
+  font-family: $tertiaryFont;
+  font-size: 2rem;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
 ul,
 li {
   margin: 0;

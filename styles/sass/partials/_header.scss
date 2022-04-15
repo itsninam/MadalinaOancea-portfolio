@@ -34,7 +34,7 @@ header {
       .name {
         font-family: $primaryFont;
         font-weight: 300;
-        background: linear-gradient(10deg, #5257e5, #72efdd);
+        background: linear-gradient(10deg, $secondary, #72efdd);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         z-index: 10;
@@ -58,11 +58,17 @@ header {
     letter-spacing: 1px;
     text-decoration: none;
     padding: 15px;
-    border-style: solid;
-    border-image: linear-gradient(50deg, #5257e5, 45%, #72efdd 80%, #72efdd 80%)
-      1;
-    border-width: 2px;
-    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-      6px 6px 10px rgba(0, 0, 0, 0.2);
+    //made after reviewing stackoverflow
+    background: linear-gradient(#fff) padding-box,
+      linear-gradient(to right, $secondary, #72efdd) border-box;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: $secondary;
+    // border-style: solid;
+    // border-image: linear-gradient(50deg, #5257e5, 45%, #72efdd 80%, #72efdd 80%)
+    //   1;
+    // border-width: 2px;
+    // box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+    //   6px 6px 10px rgba(0, 0, 0, 0.2);
   }
 }
