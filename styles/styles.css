@@ -320,7 +320,6 @@ p {
 .bodyWrapper {
   max-width: 4000px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .wrapper {
@@ -397,7 +396,7 @@ header nav .socials::after {
   width: 0;
   height: 50%;
   position: absolute;
-  border: 1px solid #5257e5;
+  border-left: 1px solid #5257e5;
   top: 220px;
 }
 header nav .socials a {
