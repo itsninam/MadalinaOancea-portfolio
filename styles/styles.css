@@ -319,7 +319,7 @@ p {
 
 .wrapper {
   max-width: 1200px;
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -363,10 +363,8 @@ header {
 header nav {
   padding: 8px 0;
   background-color: #fff;
-  position: sticky;
-  top: 0;
 }
-header nav ul {
+header nav .navList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,9 +375,40 @@ header nav ul {
       -ms-flex-align: center;
           align-items: center;
 }
-header nav a {
+header nav .navList a {
   padding: 25px;
   text-transform: uppercase;
+}
+header nav .socials {
+  position: fixed;
+  bottom: 100px;
+  z-index: 20;
+  text-align: center;
+  margin: 0 50px;
+}
+header nav .socials::after {
+  content: "";
+  width: 0;
+  height: 50%;
+  position: absolute;
+  border: 1px solid #5257e5;
+  top: 220px;
+}
+header nav .socials a {
+  padding: 15px 10px;
+}
+header nav .socials a i {
+  font-size: 1.1rem;
+  background: linear-gradient(10deg, #5257e5, #72efdd);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+header nav .socials a:hover, header nav .socials a:focus {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 header .title {
   margin-top: 250px;
@@ -394,6 +423,7 @@ header .title h1 .name {
   font-weight: 300;
   background: linear-gradient(10deg, #5257e5, #72efdd);
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 10;
   letter-spacing: -5px;
@@ -419,6 +449,20 @@ header .btn {
   color: #5257e5;
 }
 
+@media (max-width: 750px) {
+  header nav .socials {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header nav .socials::after {
+    content: none;
+  }
+}
 .about {
   position: relative;
   background-color: #f6f2f0;
