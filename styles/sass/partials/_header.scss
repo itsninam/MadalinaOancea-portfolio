@@ -9,18 +9,50 @@ header {
   nav {
     padding: 8px 0;
     background-color: #fff;
-    position: sticky;
-    top: 0;
 
-    ul {
+    .navList {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+
+      a {
+        padding: 25px;
+        text-transform: uppercase;
+      }
     }
 
-    a {
-      padding: 25px;
-      text-transform: uppercase;
+    .socials {
+      position: fixed;
+      bottom: 100px;
+      z-index: 20;
+      text-align: center;
+      margin: 0 50px;
+
+      &::after {
+        content: "";
+        width: 0;
+        height: 50%;
+        position: absolute;
+        border: 1px solid $secondary;
+        top: 220px;
+      }
+
+      a {
+        padding: 15px 10px;
+
+        i {
+          font-size: 1.1rem;
+          background: linear-gradient(10deg, $secondary, #72efdd);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: 0.2s;
+        }
+
+        &:hover,
+        &:focus {
+          transform: scale(1.5);
+        }
+      }
     }
   }
 
@@ -36,7 +68,7 @@ header {
         font-family: $primaryFont;
         font-weight: 300;
         background: linear-gradient(10deg, $secondary, #72efdd);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         z-index: 10;
         letter-spacing: -5px;
@@ -65,11 +97,21 @@ header {
     border: 2px solid transparent;
     border-radius: 5px;
     color: $secondary;
-    // border-style: solid;
-    // border-image: linear-gradient(50deg, #5257e5, 45%, #72efdd 80%, #72efdd 80%)
-    //   1;
-    // border-width: 2px;
-    // box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-    //   6px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 750px) {
+  header {
+    nav {
+      .socials {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+
+        &::after {
+          content: none;
+        }
+      }
+    }
   }
 }
