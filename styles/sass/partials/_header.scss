@@ -101,6 +101,9 @@ header {
 }
 
 @media (max-width: 750px) {
+  .wrapper {
+    width: 85%;
+  }
   header {
     nav {
       .socials {

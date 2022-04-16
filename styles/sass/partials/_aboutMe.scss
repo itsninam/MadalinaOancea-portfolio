@@ -33,17 +33,20 @@
     align-items: flex-start;
   }
 
-  img {
-    border-radius: 10px;
+  .imgContainer {
+    margin-right: 10px;
+
+    img {
+      border-radius: 10px;
+    }
   }
 
   .textContainer {
-    width: calc(60% - 20px);
-    margin-left: 20px;
+    width: 60%;
+    margin-left: 30px;
 
     p {
       margin-bottom: 20px;
-      width: 90%;
     }
   }
 
@@ -70,18 +73,10 @@
   }
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1100px) {
   .about {
-    .imgContainer {
-      width: 80%;
-    }
-
     .textContainer {
       width: 100%;
-
-      p {
-        width: 100%;
-      }
     }
   }
 }

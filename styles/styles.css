@@ -317,6 +317,12 @@ p {
   letter-spacing: 1.3px;
 }
 
+.bodyWrapper {
+  max-width: 4000px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 70%;
@@ -450,6 +456,10 @@ header .btn {
 }
 
 @media (max-width: 750px) {
+  .wrapper {
+    width: 85%;
+  }
+
   header nav .socials {
     position: static;
     display: -webkit-box;
@@ -496,16 +506,18 @@ header .btn {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.about img {
+.about .imgContainer {
+  margin-right: 10px;
+}
+.about .imgContainer img {
   border-radius: 10px;
 }
 .about .textContainer {
-  width: calc(60% - 20px);
-  margin-left: 20px;
+  width: 60%;
+  margin-left: 30px;
 }
 .about .textContainer p {
   margin-bottom: 20px;
-  width: 90%;
 }
 .about .interests .flexContainer {
   -webkit-box-pack: normal;
@@ -527,14 +539,8 @@ header .btn {
   font-size: 1.01rem;
 }
 
-@media (max-width: 1070px) {
-  .about .imgContainer {
-    width: 80%;
-  }
+@media (max-width: 1100px) {
   .about .textContainer {
-    width: 100%;
-  }
-  .about .textContainer p {
     width: 100%;
   }
 }
