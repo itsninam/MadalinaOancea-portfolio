@@ -28,3 +28,23 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.btn {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  //made after reviewing stackoverflow
+  background: linear-gradient(#fff) padding-box,
+    linear-gradient(to right, $secondary, #72efdd) border-box;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: $secondary;
+  transition: 0.5s;
+
+  &:hover,
+  &:focus {
+    background: $secondary;
+    color: #fff;
+  }
+}

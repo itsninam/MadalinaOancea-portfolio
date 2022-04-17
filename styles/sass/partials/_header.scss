@@ -84,19 +84,9 @@ header {
   }
 
   .btn {
-    font-size: 0.8rem;
-    color: $primary;
-    font-weight: 500;
     margin-top: 50px;
-    letter-spacing: 1px;
-    text-decoration: none;
     padding: 15px;
-    //made after reviewing stackoverflow
-    background: linear-gradient(#fff) padding-box,
-      linear-gradient(to right, $secondary, #72efdd) border-box;
     border: 2px solid transparent;
-    border-radius: 5px;
-    color: $secondary;
   }
 }
 
