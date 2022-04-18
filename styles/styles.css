@@ -695,7 +695,7 @@ footer h2::after {
   top: 20px;
 }
 footer nav {
-  width: 400px;
+  width: 390px;
 }
 footer nav .randomWord {
   color: #5257e5;
@@ -707,6 +707,16 @@ footer .socials {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+}
+footer .socials::after {
+  content: url(../../../assets/zic.png);
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 170px;
 }
 footer .socials a {
   font-size: 1.4rem;
@@ -727,7 +737,7 @@ footer form input {
   padding: 15px;
   background-image: url(../../../assets/background.jpg);
   border: none;
-  border-bottom: 1px solid #5257e5;
+  border-bottom: 2px solid #5257e5;
 }
 footer form input[type=text] {
   margin-right: 20px;
@@ -739,7 +749,7 @@ footer form textarea {
   padding: 15px;
   resize: none;
   background-image: url(../../../assets/background.jpg);
-  border: 1px solid #5257e5;
+  border: 2px solid #5257e5;
 }
 footer form button {
   display: block;
@@ -758,10 +768,22 @@ footer form button {
     text-align: center;
     margin-bottom: 30px;
   }
+  footer .socials::after {
+    content: none;
+  }
   footer form {
     width: 100%;
   }
   footer form input {
     width: 100%;
+  }
+}
+@media (max-width: 430px) {
+  footer nav {
+    width: 100%;
+  }
+  footer nav p:nth-child(2) {
+    height: 60px;
+    margin: 10px 0;
   }
 }
