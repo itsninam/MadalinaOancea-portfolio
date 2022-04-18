@@ -1,7 +1,6 @@
 .about {
   position: relative;
   background-color: #f6f2f0;
-  z-index: -20;
   z-index: 10;
 
   &::before {
@@ -29,30 +28,62 @@
     }
   }
 
-  .flexContainer {
-    align-items: flex-start;
-  }
-
-  .imgContainer {
-    margin-right: 10px;
-
-    img {
-      border-radius: 10px;
-    }
-  }
-
   .textContainer {
-    width: 60%;
-    margin-left: 30px;
-  }
+    text-align: center;
+    width: 85%;
+    margin: 0 auto 40px auto;
 
-  .interests {
-    .flexContainer {
-      justify-content: normal;
+    .skillsList {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      font-size: 0.7rem;
+      font-weight: 500;
+      margin: 0 auto;
     }
 
     .iconContainer {
-      padding: 12px 15px;
+      text-align: center;
+      margin: 0 10px;
+
+      i {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        color: $secondary;
+        display: inline-block;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .bottomContent {
+    text-align: center;
+    margin: 0 auto;
+
+    img {
+      border-radius: 10px;
+      margin: 15px auto;
+    }
+  }
+
+  .interests {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+
+    .flexContainer {
+      align-items: center;
+    }
+
+    h4 {
+      margin-right: 20px;
+      font-weight: 400;
+    }
+
+    .iconContainer {
+      padding: 6px 8px;
       margin-right: 20px;
       border-style: solid;
       background: linear-gradient(#f8f9fa) padding-box,
@@ -60,45 +91,23 @@
       border: 2px solid transparent;
       border-radius: 5px;
       color: $secondary;
-
-      &:first-child {
-        padding: 11px 17px;
-        font-size: 1.01rem;
-      }
+    }
+    .adjust {
+      padding: 5px 10.5px;
+      font-size: 1.01rem;
     }
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 550px) {
   .about {
     .textContainer {
       width: 100%;
-    }
-  }
-}
 
-@media (max-width: 750px) {
-  .about {
-    .flexContainer {
-      flex-direction: column;
-    }
-
-    .imgContainer {
-      margin: 0 auto;
-      margin-bottom: 20px;
-    }
-
-    .textContainer {
-      margin: 0;
-
-      p {
-        text-align: center;
-      }
-    }
-
-    .interests {
-      .flexContainer {
-        flex-direction: row;
+      .iconContainer {
+        i {
+          padding: 10px 13px;
+        }
       }
     }
   }
