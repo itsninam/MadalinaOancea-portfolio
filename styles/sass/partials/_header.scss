@@ -3,12 +3,12 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 80vh;
+  height: auto;
   position: relative;
 
   nav {
-    padding: 8px 0;
-    background-color: #fff;
+    padding: 5px 0;
 
     .navList {
       display: flex;
@@ -16,8 +16,13 @@ header {
       align-items: center;
 
       a {
-        padding: 25px;
+        padding: 25px 0 25px 35px;
         text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+          color: $secondary;
+        }
       }
     }
 
@@ -57,21 +62,56 @@ header {
   }
 
   .title {
-    margin-top: 250px;
-    width: 60%;
+    margin: 20vh 0;
+    width: 640px;
+    margin-right: auto;
     text-align: right;
+    // border: 2px solid green;
+    position: relative;
+    // border: 2px solid red;
+
+    // &::after {
+    //   content: url(../../../assets/o-dark.png);
+    //   height: 5px;
+    //   width: 5px;
+    //   display: block;
+    //   position: absolute;
+    //   right: -100px;
+    //   top: -100px;
+    // }
+
+    &::before {
+      content: url(../../../assets/o-light.png);
+      height: 5px;
+      width: 5px;
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
 
     h1 {
       font-size: 4rem;
+      font-weight: 300;
 
       .name {
-        font-family: $primaryFont;
-        font-weight: 300;
+        font-family: $secondaryFont;
         background: linear-gradient(10deg, $secondary, #72efdd);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         z-index: 10;
         letter-spacing: -5px;
+        position: relative;
+
+        &::after {
+          content: url(../../../assets/dot.png);
+          height: 5px;
+          width: 5px;
+          display: block;
+          position: absolute;
+          right: -15px;
+          top: 15px;
+        }
       }
     }
 
@@ -85,8 +125,28 @@ header {
 
   .btn {
     margin-top: 50px;
-    padding: 15px;
+    padding: 12px;
     border: 2px solid transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+  }
+}
+
+@media (max-width: 915px) {
+  header {
+    .title {
+      width: 100%;
+      border: 2px solid green;
+
+      h1 {
+        // font-size: 3rem;
+      }
+
+      .capitalize {
+        font-size: 2.3rem;
+      }
+    }
   }
 }
 
@@ -104,6 +164,18 @@ header {
         &::after {
           content: none;
         }
+      }
+    }
+
+    .title {
+      width: 100%;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .capitalize {
+        font-size: 1.7rem;
       }
     }
   }

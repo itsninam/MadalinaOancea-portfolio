@@ -17,6 +17,8 @@ const words = [
   "joyful",
   "magnificent",
   "fantastic",
+  "golden",
+  "lovely",
 ];
 
 const getRandNumber = (array) => {

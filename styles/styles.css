@@ -370,6 +370,7 @@ img {
   color: #5257e5;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  cursor: pointer;
 }
 .btn:hover, .btn:focus {
   background: #5257e5;
@@ -381,12 +382,12 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 80vh;
+  height: auto;
   position: relative;
 }
 header nav {
-  padding: 8px 0;
-  background-color: #fff;
+  padding: 5px 0;
 }
 header nav .navList {
   display: -webkit-box;
@@ -400,8 +401,11 @@ header nav .navList {
           align-items: center;
 }
 header nav .navList a {
-  padding: 25px;
+  padding: 25px 0 25px 35px;
   text-transform: uppercase;
+}
+header nav .navList a:hover, header nav .navList a:focus {
+  color: #5257e5;
 }
 header nav .socials {
   position: fixed;
@@ -435,22 +439,43 @@ header nav .socials a:hover, header nav .socials a:focus {
           transform: scale(1.5);
 }
 header .title {
-  margin-top: 250px;
-  width: 60%;
+  margin: 20vh 0;
+  width: 640px;
+  margin-right: auto;
   text-align: right;
+  position: relative;
+}
+header .title::before {
+  content: url(../../../assets/o-light.png);
+  height: 5px;
+  width: 5px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 header .title h1 {
   font-size: 4rem;
+  font-weight: 300;
 }
 header .title h1 .name {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-family: "Noto Sans", sans-serif;
   background: linear-gradient(10deg, #5257e5, #72efdd);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 10;
   letter-spacing: -5px;
+  position: relative;
+}
+header .title h1 .name::after {
+  content: url(../../../assets/dot.png);
+  height: 5px;
+  width: 5px;
+  display: block;
+  position: absolute;
+  right: -15px;
+  top: 15px;
 }
 header .title .capitalize {
   display: block;
@@ -460,10 +485,22 @@ header .title .capitalize {
 }
 header .btn {
   margin-top: 50px;
-  padding: 15px;
+  padding: 12px;
   border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
 }
 
+@media (max-width: 915px) {
+  header .title {
+    width: 100%;
+    border: 2px solid green;
+  }
+  header .title .capitalize {
+    font-size: 2.3rem;
+  }
+}
 @media (max-width: 750px) {
   .wrapper {
     width: 85%;
@@ -480,6 +517,15 @@ header .btn {
   }
   header nav .socials::after {
     content: none;
+  }
+  header .title {
+    width: 100%;
+  }
+  header .title h1 {
+    font-size: 3rem;
+  }
+  header .title .capitalize {
+    font-size: 1.7rem;
   }
 }
 .about {
