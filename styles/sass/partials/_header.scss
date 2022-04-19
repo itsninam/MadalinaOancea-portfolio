@@ -3,18 +3,23 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 80vh;
+  min-height: 95vh;
   height: auto;
 
   nav {
-    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     .mobileMenu {
       height: 0;
-      overflow: hidden;
+      width: auto;
       position: absolute;
+      top: -100px;
+      overflow: hidden;
       background: none;
       border: none;
+      color: $secondary;
     }
 
     .navList {
@@ -22,18 +27,18 @@ header {
       justify-content: flex-end;
       align-items: center;
       position: relative;
-      z-index: 9999;
+      z-index: 10;
 
-      // &::before {
-      //   content: url(../../../assets/dots.png);
-      //   height: 30px;
-      //   width: 30px;
-      //   display: block;
-      //   position: absolute;
-      //   z-index: -10;
-      //   top: 0;
-      //   right: 350px;
-      // }
+      &::before {
+        content: url(../../../assets/dots.png);
+        height: 30px;
+        width: 30px;
+        display: block;
+        position: absolute;
+        z-index: -10;
+        top: 0;
+        right: 350px;
+      }
 
       a {
         padding: 25px 0 25px 50px;
@@ -82,9 +87,8 @@ header {
   }
 
   .title {
-    margin: 20vh 0;
+    margin: 30vh 0;
     width: 640px;
-    margin-right: auto;
     text-align: right;
     position: relative;
 
@@ -109,15 +113,11 @@ header {
     }
 
     h1 {
-      font-size: 4rem;
-      font-weight: 300;
-
       .name {
         font-family: $secondaryFont;
         background: linear-gradient(10deg, $secondary, #72efdd);
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        z-index: 10;
         letter-spacing: -5px;
         position: relative;
 
@@ -134,10 +134,10 @@ header {
     }
 
     .capitalize {
-      display: block;
-      font-family: $secondaryFont;
       font-size: 2.8rem;
+      font-family: $secondaryFont;
       text-transform: uppercase;
+      display: block;
     }
   }
 
@@ -147,7 +147,6 @@ header {
     border: 2px solid transparent;
     cursor: pointer;
     position: relative;
-    z-index: 10;
   }
 }
 
@@ -157,7 +156,7 @@ header {
       width: 100%;
 
       .capitalize {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
       }
     }
   }
@@ -170,16 +169,20 @@ header {
 
   header {
     nav {
-      display: flex;
       justify-content: flex-end;
 
+      .whiteBtn {
+        color: #fff;
+      }
+
       .mobileMenu {
-        font-size: 1.5rem;
-        padding: 10px;
+        font-size: 2rem;
+        padding: 15px 0 15px 25px;
         position: absolute;
-        margin-right: 20px;
+        margin-right: 40px;
         z-index: 30;
         cursor: pointer;
+        position: static;
         overflow: visible;
         height: auto;
       }
@@ -202,11 +205,11 @@ header {
         position: absolute;
         background-color: $secondary;
         width: 100%;
-        height: 80vh;
+        margin: 0 auto;
+        height: 95vh;
         top: 0;
-        padding-top: 50px;
+        padding-top: 80px;
         opacity: 0.9;
-        z-index: 20;
 
         &::before {
           content: none;
@@ -215,15 +218,16 @@ header {
         a {
           position: relative;
           color: #fff;
-          z-index: 20;
           padding: 30px;
           font-size: 1.8rem;
+
+          &:hover,
+          &:focus {
+            color: $primary;
+          }
         }
       }
       .socials {
-        position: static;
-        display: flex;
-        justify-content: space-between;
         display: none;
 
         &::after {
@@ -234,13 +238,29 @@ header {
 
     .title {
       width: 100%;
+      margin-top: 25vh;
+      text-align: center;
 
       h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
       }
 
       .capitalize {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  header {
+    .title {
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      .capitalize {
+        font-size: 1.2rem;
       }
     }
   }
