@@ -41,9 +41,18 @@ app.displayDay = () => {
   day.innerText = new Date().toLocaleString("default", { weekday: "long" });
 };
 
+app.mobileMenu = () => {
+  const button = document.querySelector(".mobileMenu");
+  const navList = document.querySelector(".navList");
+  button.addEventListener("click", () => {
+    navList.classList.toggle("hide");
+  });
+};
+
 app.init = () => {
   app.displayWord();
   app.displayDay();
+  app.mobileMenu();
 };
 
 app.init();

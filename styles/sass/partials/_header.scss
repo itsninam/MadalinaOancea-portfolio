@@ -5,18 +5,38 @@ header {
   background-attachment: fixed;
   min-height: 80vh;
   height: auto;
-  position: relative;
 
   nav {
     padding: 5px 0;
+
+    .mobileMenu {
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+      background: none;
+      border: none;
+    }
 
     .navList {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      position: relative;
+      z-index: 9999;
+
+      // &::before {
+      //   content: url(../../../assets/dots.png);
+      //   height: 30px;
+      //   width: 30px;
+      //   display: block;
+      //   position: absolute;
+      //   z-index: -10;
+      //   top: 0;
+      //   right: 350px;
+      // }
 
       a {
-        padding: 25px 0 25px 35px;
+        padding: 25px 0 25px 50px;
         text-transform: uppercase;
 
         &:hover,
@@ -66,19 +86,17 @@ header {
     width: 640px;
     margin-right: auto;
     text-align: right;
-    // border: 2px solid green;
     position: relative;
-    // border: 2px solid red;
 
-    // &::after {
-    //   content: url(../../../assets/o-dark.png);
-    //   height: 5px;
-    //   width: 5px;
-    //   display: block;
-    //   position: absolute;
-    //   right: -100px;
-    //   top: -100px;
-    // }
+    &::after {
+      content: url(../../../assets/o-dark.png);
+      height: 5px;
+      width: 5px;
+      display: block;
+      position: absolute;
+      right: 100px;
+      top: -100px;
+    }
 
     &::before {
       content: url(../../../assets/o-light.png);
@@ -129,7 +147,7 @@ header {
     border: 2px solid transparent;
     cursor: pointer;
     position: relative;
-    z-index: 20;
+    z-index: 10;
   }
 }
 
@@ -137,11 +155,6 @@ header {
   header {
     .title {
       width: 100%;
-      border: 2px solid green;
-
-      h1 {
-        // font-size: 3rem;
-      }
 
       .capitalize {
         font-size: 2.3rem;
@@ -156,10 +169,60 @@ header {
   }
   header {
     nav {
+      display: flex;
+      justify-content: flex-end;
+
+      .mobileMenu {
+        font-size: 1.5rem;
+        padding: 10px;
+        position: absolute;
+        margin-right: 20px;
+        z-index: 30;
+        cursor: pointer;
+        overflow: visible;
+      }
+
+      .hide {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+      }
+
+      .navList {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: absolute;
+        background-color: $secondary;
+        width: 100%;
+        height: 80vh;
+        top: 0;
+        padding-top: 50px;
+        opacity: 0.9;
+        z-index: 20;
+
+        &::before {
+          content: none;
+        }
+
+        a {
+          position: relative;
+          color: #fff;
+          z-index: 20;
+          padding: 30px;
+          font-size: 1.8rem;
+        }
+      }
       .socials {
         position: static;
         display: flex;
         justify-content: space-between;
+        display: none;
 
         &::after {
           content: none;
