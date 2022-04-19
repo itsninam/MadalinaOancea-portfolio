@@ -385,10 +385,16 @@ header {
   background-attachment: fixed;
   min-height: 80vh;
   height: auto;
-  position: relative;
 }
 header nav {
   padding: 5px 0;
+}
+header nav .mobileMenu {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  background: none;
+  border: none;
 }
 header nav .navList {
   display: -webkit-box;
@@ -400,9 +406,11 @@ header nav .navList {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 9999;
 }
 header nav .navList a {
-  padding: 25px 0 25px 35px;
+  padding: 25px 0 25px 50px;
   text-transform: uppercase;
 }
 header nav .navList a:hover, header nav .navList a:focus {
@@ -445,6 +453,15 @@ header .title {
   margin-right: auto;
   text-align: right;
   position: relative;
+}
+header .title::after {
+  content: url(../../../assets/o-dark.png);
+  height: 5px;
+  width: 5px;
+  display: block;
+  position: absolute;
+  right: 100px;
+  top: -100px;
 }
 header .title::before {
   content: url(../../../assets/o-light.png);
@@ -490,13 +507,12 @@ header .btn {
   border: 2px solid transparent;
   cursor: pointer;
   position: relative;
-  z-index: 20;
+  z-index: 10;
 }
 
 @media (max-width: 915px) {
   header .title {
     width: 100%;
-    border: 2px solid green;
   }
   header .title .capitalize {
     font-size: 2.3rem;
@@ -507,6 +523,63 @@ header .btn {
     width: 85%;
   }
 
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header nav .mobileMenu {
+    font-size: 1.5rem;
+    padding: 10px;
+    position: absolute;
+    margin-right: 20px;
+    z-index: 30;
+    cursor: pointer;
+    overflow: visible;
+  }
+  header nav .hide {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  header nav .navList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    position: absolute;
+    background-color: #5257e5;
+    width: 100%;
+    height: 80vh;
+    top: 0;
+    padding-top: 50px;
+    opacity: 0.9;
+    z-index: 20;
+  }
+  header nav .navList::before {
+    content: none;
+  }
+  header nav .navList a {
+    position: relative;
+    color: #fff;
+    z-index: 20;
+    padding: 30px;
+    font-size: 1.8rem;
+  }
   header nav .socials {
     position: static;
     display: -webkit-box;
@@ -515,6 +588,7 @@ header .btn {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    display: none;
   }
   header nav .socials::after {
     content: none;
@@ -533,16 +607,6 @@ header .btn {
   position: relative;
   background-color: #f6f2f0;
   z-index: 10;
-}
-.about::before {
-  content: url(../../../assets/blob.png);
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -20;
-  top: -400px;
-  left: -500px;
 }
 .about h2 {
   text-align: right;
