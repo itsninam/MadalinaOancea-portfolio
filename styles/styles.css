@@ -283,13 +283,23 @@ input {
   padding: 0;
 }
 
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 h2 {
-  text-transform: uppercase;
-  margin-bottom: 50px;
-  color: #5257e5;
-  letter-spacing: 2px;
   font-family: "Anton", sans-serif;
   font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5257e5;
+  margin-bottom: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 h3 {
@@ -304,6 +314,7 @@ li {
 }
 
 a {
+  font-size: 1rem;
   color: #495057;
   letter-spacing: 1px;
   display: inline-block;
@@ -383,18 +394,29 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 80vh;
+  min-height: 95vh;
   height: auto;
 }
 header nav {
-  padding: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 header nav .mobileMenu {
   height: 0;
-  overflow: hidden;
+  width: auto;
   position: absolute;
+  top: -100px;
+  overflow: hidden;
   background: none;
   border: none;
+  color: #5257e5;
 }
 header nav .navList {
   display: -webkit-box;
@@ -407,7 +429,17 @@ header nav .navList {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  z-index: 9999;
+  z-index: 10;
+}
+header nav .navList::before {
+  content: url(../../../assets/dots.png);
+  height: 30px;
+  width: 30px;
+  display: block;
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  right: 350px;
 }
 header nav .navList a {
   padding: 25px 0 25px 50px;
@@ -448,9 +480,8 @@ header nav .socials a:hover, header nav .socials a:focus {
           transform: scale(1.5);
 }
 header .title {
-  margin: 20vh 0;
+  margin: 30vh 0;
   width: 640px;
-  margin-right: auto;
   text-align: right;
   position: relative;
 }
@@ -472,17 +503,12 @@ header .title::before {
   left: 0px;
   top: 0px;
 }
-header .title h1 {
-  font-size: 4rem;
-  font-weight: 300;
-}
 header .title h1 .name {
   font-family: "Noto Sans", sans-serif;
   background: linear-gradient(10deg, #5257e5, #72efdd);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  z-index: 10;
   letter-spacing: -5px;
   position: relative;
 }
@@ -496,10 +522,10 @@ header .title h1 .name::after {
   top: 15px;
 }
 header .title .capitalize {
-  display: block;
-  font-family: "Noto Sans", sans-serif;
   font-size: 2.8rem;
+  font-family: "Noto Sans", sans-serif;
   text-transform: uppercase;
+  display: block;
 }
 header .btn {
   margin-top: 50px;
@@ -507,7 +533,6 @@ header .btn {
   border: 2px solid transparent;
   cursor: pointer;
   position: relative;
-  z-index: 10;
 }
 
 @media (max-width: 915px) {
@@ -515,7 +540,7 @@ header .btn {
     width: 100%;
   }
   header .title .capitalize {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 }
 @media (max-width: 750px) {
@@ -524,20 +549,21 @@ header .btn {
   }
 
   header nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  header nav .whiteBtn {
+    color: #fff;
+  }
   header nav .mobileMenu {
-    font-size: 1.5rem;
-    padding: 10px;
+    font-size: 2rem;
+    padding: 15px 0 15px 25px;
     position: absolute;
-    margin-right: 20px;
+    margin-right: 40px;
     z-index: 30;
     cursor: pointer;
+    position: static;
     overflow: visible;
     height: auto;
   }
@@ -565,11 +591,11 @@ header .btn {
     position: absolute;
     background-color: #5257e5;
     width: 100%;
-    height: 80vh;
+    margin: 0 auto;
+    height: 95vh;
     top: 0;
-    padding-top: 50px;
+    padding-top: 80px;
     opacity: 0.9;
-    z-index: 20;
   }
   header nav .navList::before {
     content: none;
@@ -577,18 +603,13 @@ header .btn {
   header nav .navList a {
     position: relative;
     color: #fff;
-    z-index: 20;
     padding: 30px;
     font-size: 1.8rem;
   }
+  header nav .navList a:hover, header nav .navList a:focus {
+    color: #495057;
+  }
   header nav .socials {
-    position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     display: none;
   }
   header nav .socials::after {
@@ -596,12 +617,22 @@ header .btn {
   }
   header .title {
     width: 100%;
+    margin-top: 25vh;
+    text-align: center;
   }
   header .title h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
   header .title .capitalize {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 390px) {
+  header .title h1 {
+    font-size: 2.4rem;
+  }
+  header .title .capitalize {
+    font-size: 1.2rem;
   }
 }
 .about {
@@ -866,5 +897,55 @@ footer form button {
   footer nav p:nth-child(2) {
     height: 60px;
     margin: 10px 0;
+  }
+}
+.title {
+  -webkit-animation: slideLeft 0.4s;
+          animation: slideLeft 0.4s;
+}
+
+@-webkit-keyframes slideLeft {
+  from {
+    margin-left: 30%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    margin-left: 30%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+.btn {
+  -webkit-animation: fadeIn 0.8s;
+          animation: fadeIn 0.8s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -46,6 +46,11 @@ app.mobileMenu = () => {
   const navList = document.querySelector(".navList");
   button.addEventListener("click", () => {
     navList.classList.toggle("hide");
+    button.classList.toggle("whiteBtn");
+  });
+  navList.addEventListener("click", () => {
+    navList.classList.add("hide");
+    button.classList.remove("whiteBtn");
   });
 };
 

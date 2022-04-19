@@ -21,13 +21,21 @@ input {
   padding: 0;
 }
 
+h1 {
+  font-family: $primaryFont;
+  font-size: 4.5rem;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
 h2 {
-  text-transform: uppercase;
-  margin-bottom: 50px;
-  color: $secondary;
-  letter-spacing: 2px;
   font-family: $tertiaryFont;
   font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $secondary;
+  margin-bottom: 50px;
+  transition: 0.3s;
 }
 
 h3 {
@@ -42,6 +50,7 @@ li {
 }
 
 a {
+  font-size: 1rem;
   color: $primary;
   letter-spacing: 1px;
   display: inline-block;

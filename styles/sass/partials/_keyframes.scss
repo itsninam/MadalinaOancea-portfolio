@@ -1,0 +1,31 @@
+// title
+.title {
+  animation: slideLeft 0.4s;
+}
+
+@keyframes slideLeft {
+  from {
+    margin-left: 30%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+//view work button
+.btn {
+  animation: fadeIn 0.8s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
