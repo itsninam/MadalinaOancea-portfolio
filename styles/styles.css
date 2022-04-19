@@ -539,6 +539,7 @@ header .btn {
     z-index: 30;
     cursor: pointer;
     overflow: visible;
+    height: auto;
   }
   header nav .hide {
     position: absolute;
