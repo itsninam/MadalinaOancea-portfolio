@@ -23,8 +23,9 @@
   }
 
   .textContainer {
-    width: calc(50% - 50px);
-    margin: 0 25px;
+    width: calc(50% - 80px);
+    margin: 0 40px;
+
     align-self: flex-start;
   }
 
@@ -34,8 +35,9 @@
   }
 
   .imgContainer {
-    margin: 0 25px;
-    width: calc(50% - 50px);
+    margin: 0 40px;
+    width: calc(50% - 80px);
+
     align-self: flex-start;
 
     img {

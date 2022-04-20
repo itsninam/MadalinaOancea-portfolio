@@ -1,18 +1,6 @@
 .about {
   position: relative;
-  background-color: #f6f2f0;
   z-index: 10;
-
-  // &::before {
-  //   content: url(../../../assets/blob.png);
-  //   display: block;
-  //   width: 100%;
-  //   height: 100%;
-  //   position: absolute;
-  //   z-index: -20;
-  //   top: -400px;
-  //   left: -500px;
-  // }
 
   h2 {
     text-align: right;
@@ -86,7 +74,7 @@
       padding: 6px 8px;
       margin-right: 20px;
       border-style: solid;
-      background: linear-gradient(#f8f9fa) padding-box,
+      background: linear-gradient(#fff) padding-box,
         linear-gradient(to top right, $secondary, #72efdd) border-box;
       border: 2px solid transparent;
       border-radius: 5px;
