@@ -15,7 +15,7 @@ const words = [
   "blissful",
   "radiant",
   "joyful",
-  "magnificent",
+  // "magnificent",
   "fantastic",
   "golden",
   "lovely",
@@ -26,7 +26,7 @@ const getRandNumber = (array) => {
   return array[randomNum];
 };
 
-console.log(getRandNumber(words));
+const navList = document.querySelector(".navList");
 
 setInterval(
   (app.displayWord = () => {
@@ -43,7 +43,6 @@ app.displayDay = () => {
 
 app.mobileMenu = () => {
   const button = document.querySelector(".mobileMenu");
-  const navList = document.querySelector(".navList");
   button.addEventListener("click", () => {
     navList.classList.toggle("hide");
     button.classList.toggle("whiteBtn");

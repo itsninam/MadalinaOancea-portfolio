@@ -262,6 +262,7 @@ html {
 
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -372,12 +373,12 @@ img {
 
 .btn {
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1px;
   padding: 8px 12px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff)) padding-box, -webkit-gradient(linear, left top, right top, from(#5257e5), to(#72efdd)) border-box;
-  background: linear-gradient(#fff) padding-box, linear-gradient(to right, #5257e5, #72efdd) border-box;
-  border: 1px solid transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff)) padding-box, -webkit-gradient(linear, left bottom, right top, from(#5257e5), to(#72efdd)) border-box;
+  background: linear-gradient(#fff) padding-box, linear-gradient(to top right, #5257e5, #72efdd) border-box;
+  border: 2px solid transparent;
   border-radius: 8px;
   color: #5257e5;
   -webkit-transition: 0.5s;
@@ -809,7 +810,7 @@ footer nav {
   width: 390px;
 }
 footer nav p {
-  font-size: 0.89rem;
+  font-size: 0.85rem;
 }
 footer nav .randomWord {
   color: #5257e5;
@@ -902,6 +903,11 @@ footer form button {
   }
 }
 .title {
+  -webkit-animation: slideLeft 0.4s;
+          animation: slideLeft 0.4s;
+}
+
+.imgContainer img {
   -webkit-animation: slideLeft 0.4s;
           animation: slideLeft 0.4s;
 }
