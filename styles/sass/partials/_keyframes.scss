@@ -3,6 +3,12 @@
   animation: slideLeft 0.4s;
 }
 
+.imgContainer {
+  img {
+    animation: slideLeft 0.4s;
+  }
+}
+
 @keyframes slideLeft {
   from {
     margin-left: 30%;
