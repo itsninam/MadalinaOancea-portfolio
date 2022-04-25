@@ -1,6 +1,7 @@
 html {
   font-size: 125%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
   font-weight: 400;
   color: $primary;
   font-size: 0.9rem;
+  overflow-x: hidden;
 }
 
 h1,

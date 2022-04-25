@@ -43,9 +43,17 @@ img {
   transition: 0.5s;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:focus,
+  &:hover {
     background: $secondary;
     color: #fff;
+  }
+
+  &:focus:not(:focus-visible) {
+    background: linear-gradient(#fff) padding-box,
+      linear-gradient(to top right, $secondary, #56cfe1) border-box;
+    border: 1px solid transparent;
+    color: $secondary;
+    transition: 0.1s;
   }
 }

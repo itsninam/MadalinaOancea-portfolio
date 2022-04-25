@@ -108,7 +108,7 @@
             <div class="skills">
               <h3>Skills</h3>
               <ul class="skillsList flexContainer">
-                <li class="iconContainer">
+                <li class="iconContainer fadeIn">
                   <i class="devicon-html5-plain" aria-hidden="true"></i>
                   <p>Html</p>
                 </li>
@@ -226,7 +226,11 @@
               </div>
             </div>
             <div class="imgContainer">
-              <img src="./assets/recipes.png" alt="Photo of recipe project" />
+              <img
+                src="./assets/recipes.png"
+                alt="Photo of recipe project"
+                class="slideIn right"
+              />
             </div>
           </div>
           <div class="projectContainer flexContainer reverse">
@@ -283,7 +287,8 @@
             <div class="imgContainer">
               <img
                 src="./assets/instafun.png"
-                alt="A photo of the Trivia project"
+                alt="A photo of the InstaFun project"
+                class="slideIn left"
               />
             </div>
           </div>
@@ -336,6 +341,7 @@
               <img
                 src="./assets/beachstays.png"
                 alt="A photo of the Beachstays project"
+                class="slideIn right"
               />
             </div>
           </div>
@@ -391,7 +397,8 @@
             <div class="imgContainer">
               <img
                 src="./assets/trivia.png"
-                alt="A photo of the InstaFun project"
+                alt="A photo of the Trivia project"
+                class="slideIn left"
               />
             </div>
           </div>
@@ -448,15 +455,22 @@
               </li>
             </ul>
           </nav>
-          <form action="">
-            <label for="name" class="sr-only">Name</label>
-            <input type="text" id="name" placeholder="Name" required />
-            <label for="email" class="sr-only">Email</label>
+          <form action="https://formspree.io/f/xrgjoeny" method="POST">
+            <label for="name" class="sr-only">Your name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Name"
+              name="name"
+              required
+            />
+            <label for="email" class="sr-only">Your email</label>
             <input
               type="email"
               id="email"
               placeholder="Email address"
               required
+              name="email"
             />
             <label for="message" class="sr-only">Message</label>
             <textarea
