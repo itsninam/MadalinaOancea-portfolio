@@ -241,8 +241,16 @@ header {
       margin-top: 25vh;
       text-align: center;
 
+      &::before {
+        top: -20px;
+      }
+
       h1 {
         font-size: 3.2rem;
+
+        .name {
+          letter-spacing: -4.5px;
+        }
       }
 
       .capitalize {
@@ -257,11 +265,19 @@ header {
     .title {
       h1 {
         font-size: 2.4rem;
+
+        .name {
+          letter-spacing: -3px;
+        }
       }
 
       .capitalize {
         font-size: 1.2rem;
       }
     }
+  }
+
+  h4 {
+    font-size: 0.7rem;
   }
 }
