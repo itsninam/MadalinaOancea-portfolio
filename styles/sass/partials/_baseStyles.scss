@@ -49,7 +49,8 @@ img {
     color: #fff;
   }
 
-  &:focus:not(:focus-visible) {
+  &:focus:not(:focus-visible),
+  &:active {
     background: linear-gradient(#fff) padding-box,
       linear-gradient(to top right, $secondary, #56cfe1) border-box;
     border: 1px solid transparent;
