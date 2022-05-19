@@ -769,8 +769,8 @@ header .btn {
   margin-bottom: 80px;
 }
 .portfolio .textContainer {
-  width: calc(50% - 80px);
-  margin: 0 40px;
+  width: calc(50% - 40px);
+  margin: 0 20px;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
@@ -779,8 +779,8 @@ header .btn {
   margin-left: auto;
 }
 .portfolio .imgContainer {
-  margin: 0 40px;
-  width: calc(50% - 80px);
+  margin: 0 20px;
+  width: calc(50% - 40px);
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
