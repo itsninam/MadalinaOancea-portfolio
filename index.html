@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Madalina Oancea</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon-32x32.png" />
     <!-- link to google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,6 +26,8 @@
     />
     <!-- link to stylesheet -->
     <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- link to aos library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body class="bodyWrapper">
     <header id="header">
@@ -97,7 +101,7 @@
         <div class="wrapper">
           <h2>About me</h2>
           <div class="textContainer">
-            <p>
+            <p data-aos="zoom-in">
               I’m a front end developer based in Waterloo, ON. My two year
               experience as a healthcare provider helps me solve problems in a
               fast paced and high-pressure environments. I am excited about
@@ -108,35 +112,63 @@
             <div class="skills">
               <h3>Skills</h3>
               <ul class="skillsList flexContainer">
-                <li class="iconContainer fadeIn">
+                <li class="iconContainer fadeIn" data-aos="zoom-in">
                   <i class="devicon-html5-plain" aria-hidden="true"></i>
                   <p>Html</p>
                 </li>
-                <li class="iconContainer">
+                <li
+                  class="iconContainer"
+                  data-aos="zoom-in"
+                  data-aos-delay="50"
+                >
                   <i class="devicon-css3-plain" aria-hidden="true"></i>
                   <p>Css3</p>
                 </li>
-                <li class="iconContainer">
+                <li
+                  class="iconContainer"
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
+                >
                   <i class="devicon-javascript-plain" aria-hidden="true"></i>
                   <p>ES6</p>
                 </li>
-                <li class="iconContainer">
+                <li
+                  class="iconContainer"
+                  data-aos="zoom-in"
+                  data-aos-delay="150"
+                >
                   <i class="devicon-jquery-plain" aria-hidden="true"></i>
                   <p>jQuery</p>
                 </li>
-                <li class="iconContainer">
+                <li
+                  class="iconContainer"
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+                >
                   <i class="devicon-sass-plain" aria-hidden="true"></i>
                   <p>Sass</p>
                 </li>
-                <li class="iconContainer">
+                <li
+                  class="iconContainer"
+                  data-aos="zoom-in"
+                  data-aos-delay="250"
+                >
                   <i class="devicon-react-plain" aria-hidden="true"></i>
                   <p>React</p>
                 </li>
-                <li class="iconContainer">
+                <li
+                  class="iconContainer"
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
+                >
                   <i class="devicon-firebase-plain" aria-hidden="true"></i>
                   <p>Firebase</p>
                 </li>
-                <li class="iconContainer">
+                <li
+                  class="iconContainer"
+                  data-aos="zoom-in"
+                  data-aos-delay="350"
+                >
                   <div class="icon">
                     <i class="devicon-git-plain" aria-hidden="true"></i>
                   </div>
@@ -171,11 +203,142 @@
       </section>
       <!-- projects -->
       <section class="portfolio" id="portfolio">
-        <div class="wrapper">
+        <div class="wrapper collapsed">
           <div class="alignMiddle">
             <h2>Projects</h2>
           </div>
-          <div class="projectContainer flexContainer">
+          <!-- project start -->
+          <div class="projectContainer flexContainer" data-aos="fade-up">
+            <div class="textContainer alignRight">
+              <h3>All out of</h3>
+              <p>
+                Grocery list app that allows user to enter desired items, keep
+                track of total items entered, as well as modify shopping list by
+                increasing and decreasing individual item amount, removing
+                items, and clearing entire list. Unsplash API used to generate
+                image based on user input and Firebase used to store data.
+              </p>
+              <div class="iconsContainer">
+                <span class="sr-only">Made with</span>
+                <ul class="projectIcon flexContainer alignRight">
+                  <li class="iconContainer" title="React">
+                    <span class="sr-only">React</span>
+                    <i class="devicon-react-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer" title="Firebase">
+                    <span class="sr-only">Firebase</span>
+                    <i class="devicon-firebase-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer" title="Css3">
+                    <span class="sr-only">Css</span>
+                    <i class="devicon-css3-plain" aria-hidden="true"></i>
+                  </li>
+
+                  <li class="iconContainer" title="Responsive">
+                    <span class="sr-only">Responsive</span>
+                    <i
+                      class="fa-solid fa-mobile-screen-button"
+                      aria-hidden="true"
+                    ></i>
+                  </li>
+                </ul>
+              </div>
+              <div class="projectLinks">
+                <a
+                  href="https://grocerylist-prod.netlify.app/"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn"
+                  >Live site</a
+                >
+                <span> || </span>
+                <a
+                  href="https://github.com/itsninam/grocery-list-app"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <a
+              class="imgContainer"
+              href="https://grocerylist-prod.netlify.app/"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="./assets/alloutof.png"
+                alt="Photo of 'All out of' project"
+              />
+            </a>
+          </div>
+          <!-- project start  -->
+          <div
+            class="projectContainer flexContainer reverse"
+            data-aos="fade-up"
+          >
+            <div class="textContainer">
+              <h3>Plants & Candles</h3>
+              <p>
+                E-commerce store using Unsplash API for images. API data
+                manipulated to include prices and product names. User can filter
+                through product categories, add and remove products from cart,
+                and view total items and price at bottom of cart. React Router
+                used to navigate between pages.
+              </p>
+              <div class="iconsContainer">
+                <span class="sr-only">Made with</span>
+                <ul class="projectIcon flexContainer">
+                  <li class="iconContainer" title="React">
+                    <span class="sr-only">React</span>
+                    <i class="devicon-react-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer" title="Sass">
+                    <span class="sr-only">Sass</span>
+                    <i class="devicon-sass-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer" title="Responsive">
+                    <span class="sr-only">Responsive</span>
+                    <i
+                      class="fa-solid fa-mobile-screen-button"
+                      aria-hidden="true"
+                    ></i>
+                  </li>
+                </ul>
+              </div>
+              <div class="projectLinks">
+                <a
+                  href="https://plantsncandles.netlify.app/"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener"
+                  >Live site</a
+                >
+                <span> || </span>
+                <a
+                  href="https://github.com/itsninam/plantsCandles"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <a
+              class="imgContainer"
+              target="_blank"
+              rel="noopener"
+              href="https://plantsncandles.netlify.app/"
+            >
+              <img
+                src="./assets/plantscandles.png"
+                alt="A photo of 'Plants & Candles' project"
+              />
+            </a>
+          </div>
+          <!-- project start -->
+          <div class="projectContainer flexContainer" data-aos="fade-up">
             <div class="textContainer alignRight">
               <h3>Find a recipe</h3>
               <p>
@@ -186,19 +349,19 @@
               <div class="iconsContainer">
                 <span class="sr-only">Made with</span>
                 <ul class="projectIcon flexContainer alignRight">
-                  <li class="iconContainer">
+                  <li class="iconContainer" title="HTML">
                     <span class="sr-only">Html</span>
                     <i class="devicon-html5-plain" aria-hidden="true"></i>
                   </li>
-                  <li class="iconContainer">
-                    <span class="sr-only">Sass</span>
-                    <i class="devicon-sass-plain" aria-hidden="true"></i>
-                  </li>
-                  <li class="iconContainer">
+                  <li class="iconContainer" title="JavaScript">
                     <span class="sr-only">Javascript</span>
                     <i class="devicon-javascript-plain" aria-hidden="true"></i>
                   </li>
-                  <li class="iconContainer">
+                  <li class="iconContainer" title="Sass">
+                    <span class="sr-only">Sass</span>
+                    <i class="devicon-sass-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer" title="Responsive">
                     <span class="sr-only">Responsive</span>
                     <i
                       class="fa-solid fa-mobile-screen-button"
@@ -225,15 +388,24 @@
                 >
               </div>
             </div>
-            <div class="imgContainer">
+            <a
+              class="imgContainer"
+              href="https://neon-starlight-e71627.netlify.app/"
+              target="_blank"
+              rel="noopener"
+            >
               <img
                 src="./assets/recipes.png"
-                alt="Photo of recipe project"
-                class="slideIn right"
+                alt="Photo of 'Find a recipe' project"
               />
-            </div>
+            </a>
           </div>
-          <div class="projectContainer flexContainer reverse">
+          <button class="seeMoreBtn btn">See more</button>
+          <!-- project start -->
+          <div
+            class="projectContainer flexContainer reverse seeMoreItem"
+            data-aos="fade-up"
+          >
             <div class="textContainer">
               <h3>InstaFun</h3>
               <p>
@@ -245,19 +417,20 @@
               <div class="iconsContainer">
                 <span class="sr-only">Made with</span>
                 <ul class="projectIcon flexContainer">
-                  <li class="iconContainer">
+                  <li class="iconContainer" title="HTML">
                     <span class="sr-only">Html</span>
                     <i class="devicon-html5-plain" aria-hidden="true"></i>
                   </li>
-                  <li class="iconContainer">
-                    <span class="sr-only">Sass</span>
-                    <i class="devicon-sass-plain" aria-hidden="true"></i>
-                  </li>
-                  <li class="iconContainer">
+                  <li class="iconContainer" title="JavaScript">
                     <span class="sr-only">Javascript</span>
                     <i class="devicon-javascript-plain" aria-hidden="true"></i>
                   </li>
-                  <li class="iconContainer">
+                  <li class="iconContainer" title="Sass">
+                    <span class="sr-only">Sass</span>
+                    <i class="devicon-sass-plain" aria-hidden="true"></i>
+                  </li>
+
+                  <li class="iconContainer" title="Responsive">
                     <span class="sr-only">Responsive</span>
                     <i
                       class="fa-solid fa-mobile-screen-button"
@@ -284,33 +457,48 @@
                 >
               </div>
             </div>
-            <div class="imgContainer">
+            <a
+              class="imgContainer"
+              href="https://insta-fun.netlify.app/"
+              class="btn"
+              target="_blank"
+              rel="noopener"
+            >
               <img
                 src="./assets/instafun.png"
-                alt="A photo of the InstaFun project"
-                class="slideIn left"
+                alt="A photo of 'InstaFun' project"
               />
-            </div>
+            </a>
           </div>
-          <div class="projectContainer flexContainer">
+          <!-- project start -->
+          <div
+            class="projectContainer flexContainer seeMoreItem"
+            data-aos="fade-up"
+          >
             <div class="textContainer alignRight">
               <h3>BeachStays</h3>
               <p>
                 Multi-page and responsive PSD conversion using semantic HTML and
-                Sass. Mobile version designed by me.
+                Sass with a pop of JavaScript to improve mobile menu
+                functionality and create an interactive form. Mobile version
+                designed by me.
               </p>
               <div class="iconsContainer">
                 <span class="sr-only">Made with</span>
                 <ul class="projectIcon flexContainer alignRight">
-                  <li class="iconContainer">
+                  <li class="iconContainer" title="HTML">
                     <span class="sr-only">Html</span>
                     <i class="devicon-html5-plain" aria-hidden="true"></i>
                   </li>
-                  <li class="iconContainer">
+                  <li class="iconContainer" title="JavaScript">
+                    <span class="sr-only">Javascript</span>
+                    <i class="devicon-javascript-plain" aria-hidden="true"></i>
+                  </li>
+                  <li class="iconContainer" title="Sass">
                     <span class="sr-only">Sass</span>
                     <i class="devicon-sass-plain" aria-hidden="true"></i>
                   </li>
-                  <li class="iconContainer">
+                  <li class="iconContainer" title="Responsive">
                     <span class="sr-only">Responsive</span>
                     <i
                       class="fa-solid fa-mobile-screen-button"
@@ -337,71 +525,20 @@
                 >
               </div>
             </div>
-            <div class="imgContainer">
+            <a
+              class="imgContainer"
+              href="https://madalina-oancea-project1.netlify.app/"
+              class="btn"
+              target="_blank"
+              rel="noopener"
+            >
               <img
                 src="./assets/beachstays.png"
-                alt="A photo of the Beachstays project"
-                class="slideIn right"
+                alt="A photo of 'BeachStays' project"
               />
-            </div>
+            </a>
           </div>
-          <div class="projectContainer flexContainer reverse">
-            <div class="textContainer">
-              <h3>Trivia</h3>
-              <p>
-                Multiple choice quiz to test your computer science knowledge.
-                Powered by jQuery and Open Trivia Database API.
-              </p>
-              <div class="iconsContainer">
-                <span class="sr-only">Made with</span>
-                <ul class="projectIcon flexContainer">
-                  <li class="iconContainer">
-                    <span class="sr-only">Html</span>
-                    <i class="devicon-html5-plain" aria-hidden="true"></i>
-                  </li>
-                  <li class="iconContainer">
-                    <span class="sr-only">Css</span>
-                    <i class="devicon-css3-plain" aria-hidden="true"></i>
-                  </li>
-                  <li class="iconContainer">
-                    <span class="sr-only">jQuery</span>
-                    <i class="devicon-jquery-plain" aria-hidden="true"></i>
-                  </li>
-                  <li class="iconContainer">
-                    <span class="sr-only">Responsive</span>
-                    <i
-                      class="fa-solid fa-mobile-screen-button"
-                      aria-hidden="true"
-                    ></i>
-                  </li>
-                </ul>
-              </div>
-              <div class="projectLinks">
-                <a
-                  href="https://trivia-questionz.netlify.app/"
-                  class="btn"
-                  target="_blank"
-                  rel="noopener"
-                  >Live site</a
-                >
-                <span> || </span>
-                <a
-                  href="https://github.com/itsninam/trivia.git"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-            <div class="imgContainer">
-              <img
-                src="./assets/trivia.png"
-                alt="A photo of the Trivia project"
-                class="slideIn left"
-              />
-            </div>
-          </div>
+          <button class="seeLessBtn seeMoreItem btn">See Less</button>
         </div>
       </section>
     </main>
@@ -494,5 +631,10 @@
     </footer>
     <!-- link to js -->
     <script src="./app.js"></script>
+    <!-- link to aos library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

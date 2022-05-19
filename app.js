@@ -78,11 +78,34 @@ window.onbeforeunload = () => {
   }
 };
 
+//see more/less project
+app.seeMoreLess = () => {
+  //target the projects container
+  const projectsContainer = document.querySelector(".collapsed");
+  //target the see more button
+  const seeMore = document.querySelector(".seeMoreBtn");
+  //target the see less button
+  const seeLess = document.querySelector(".seeLessBtn");
+
+  //when see more button is clicked, add the expanded class to hide the see more button and remove collapsed class to display all items
+  seeMore.addEventListener("click", () => {
+    projectsContainer.classList.remove("collapsed");
+    projectsContainer.classList.add("expanded");
+  });
+
+  //when see less button is clicked, add collapsed class to hide items and remove expanded class to bring back the see more button
+  seeLess.addEventListener("click", () => {
+    projectsContainer.classList.add("collapsed");
+    projectsContainer.classList.remove("expanded");
+  });
+};
+
 app.init = () => {
   window.addEventListener("scroll", app.slideIn);
   app.displayWord();
   app.displayDay();
   app.mobileMenu();
+  app.seeMoreLess();
 };
 
 app.init();

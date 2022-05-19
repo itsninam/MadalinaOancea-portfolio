@@ -29,21 +29,3 @@
     opacity: 1;
   }
 }
-
-//project images
-.slideIn.right {
-  opacity: 0;
-  transition: all 0.9s;
-  transform: translateX(30%) scale(0.95);
-}
-
-.slideIn.left {
-  opacity: 0;
-  transition: all 0.9s;
-  transform: translateX(-30%) scale(0.95);
-}
-
-.slideIn.active {
-  opacity: 1;
-  transform: translateX(0%) scale(1);
-}
