@@ -263,7 +263,6 @@ html {
 html {
   font-size: 125%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -272,7 +271,6 @@ body {
   font-weight: 400;
   color: #495057;
   font-size: 0.9rem;
-  overflow-x: hidden;
 }
 
 h1,
@@ -747,6 +745,9 @@ header .btn {
     padding: 10px 13px;
   }
 }
+.portfolio {
+  position: relative;
+}
 .portfolio .alignMiddle {
   text-align: center;
 }
@@ -795,6 +796,19 @@ header .btn {
 }
 .portfolio .projectIcon i {
   font-size: 1rem;
+}
+.portfolio .wrapper.collapsed > .seeMoreItem {
+  position: absolute;
+  left: -50000px;
+}
+.portfolio .wrapper.expanded > .seeMoreBtn {
+  position: absolute;
+  left: -50000px;
+}
+.portfolio .seeMoreBtn,
+.portfolio .seeLessBtn {
+  margin: 0 auto;
+  display: block;
 }
 
 @media (max-width: 987px) {
@@ -977,25 +991,4 @@ footer .scrollToTop {
   100% {
     opacity: 1;
   }
-}
-.slideIn.right {
-  opacity: 0;
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
-  -webkit-transform: translateX(30%) scale(0.95);
-          transform: translateX(30%) scale(0.95);
-}
-
-.slideIn.left {
-  opacity: 0;
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
-  -webkit-transform: translateX(-30%) scale(0.95);
-          transform: translateX(-30%) scale(0.95);
-}
-
-.slideIn.active {
-  opacity: 1;
-  -webkit-transform: translateX(0%) scale(1);
-          transform: translateX(0%) scale(1);
 }

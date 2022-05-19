@@ -1,4 +1,6 @@
 .portfolio {
+  position: relative;
+
   .alignMiddle {
     text-align: center;
   }
@@ -51,6 +53,23 @@
     i {
       font-size: 1rem;
     }
+  }
+
+  //see more/less functionality
+  .wrapper.collapsed > .seeMoreItem {
+    position: absolute;
+    left: -50000px;
+  }
+
+  .wrapper.expanded > .seeMoreBtn {
+    position: absolute;
+    left: -50000px;
+  }
+
+  .seeMoreBtn,
+  .seeLessBtn {
+    margin: 0 auto;
+    display: block;
   }
 }
 
