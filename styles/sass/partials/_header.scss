@@ -28,17 +28,6 @@ header {
       position: relative;
       z-index: 10;
 
-      &::before {
-        content: url(../../../assets/dots.png);
-        height: 30px;
-        width: 30px;
-        display: block;
-        position: absolute;
-        z-index: -10;
-        top: 0;
-        right: 350px;
-      }
-
       a {
         padding: 25px 0 25px 50px;
         text-transform: uppercase;
@@ -90,26 +79,6 @@ header {
     width: 640px;
     text-align: right;
     position: relative;
-
-    &::after {
-      content: url(../../../assets/o-dark.png);
-      height: 5px;
-      width: 5px;
-      display: block;
-      position: absolute;
-      right: 100px;
-      top: -100px;
-    }
-
-    &::before {
-      content: url(../../../assets/o-light.png);
-      height: 5px;
-      width: 5px;
-      display: block;
-      position: absolute;
-      left: 0px;
-      top: 0px;
-    }
 
     h1 {
       .name {

@@ -58,7 +58,7 @@
   //see more/less functionality
   .wrapper.collapsed > .seeMoreItem {
     position: absolute;
-    left: -50000px;
+    top: -5000px;
   }
 
   .wrapper.expanded > .seeMoreBtn {
@@ -70,6 +70,19 @@
   .seeLessBtn {
     margin: 0 auto;
     display: block;
+  }
+
+  .seeMoreBtn {
+    background: $secondary;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: $secondary;
+      background: linear-gradient(#fff) padding-box,
+        linear-gradient(to top right, $secondary, #56cfe1) border-box;
+      border: 1px solid transparent;
+    }
   }
 }
 
