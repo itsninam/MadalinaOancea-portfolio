@@ -338,7 +338,7 @@ p {
 
 .wrapper {
   max-width: 1200px;
-  width: 70%;
+  width: 73%;
   margin: 0 auto;
 }
 
@@ -439,16 +439,6 @@ header nav .navList {
   position: relative;
   z-index: 10;
 }
-header nav .navList::before {
-  content: url(../../../assets/dots.png);
-  height: 30px;
-  width: 30px;
-  display: block;
-  position: absolute;
-  z-index: -10;
-  top: 0;
-  right: 350px;
-}
 header nav .navList a {
   padding: 25px 0 25px 50px;
   text-transform: uppercase;
@@ -492,24 +482,6 @@ header .title {
   width: 640px;
   text-align: right;
   position: relative;
-}
-header .title::after {
-  content: url(../../../assets/o-dark.png);
-  height: 5px;
-  width: 5px;
-  display: block;
-  position: absolute;
-  right: 100px;
-  top: -100px;
-}
-header .title::before {
-  content: url(../../../assets/o-light.png);
-  height: 5px;
-  width: 5px;
-  display: block;
-  position: absolute;
-  left: 0px;
-  top: 0px;
 }
 header .title h1 .name {
   font-family: "Noto Sans", sans-serif;
@@ -799,7 +771,7 @@ header .btn {
 }
 .portfolio .wrapper.collapsed > .seeMoreItem {
   position: absolute;
-  left: -50000px;
+  top: -5000px;
 }
 .portfolio .wrapper.expanded > .seeMoreBtn {
   position: absolute;
@@ -809,6 +781,16 @@ header .btn {
 .portfolio .seeLessBtn {
   margin: 0 auto;
   display: block;
+}
+.portfolio .seeMoreBtn {
+  background: #5257e5;
+  color: #fff;
+}
+.portfolio .seeMoreBtn:hover, .portfolio .seeMoreBtn:focus {
+  color: #5257e5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff)) padding-box, -webkit-gradient(linear, left bottom, right top, from(#5257e5), to(#56cfe1)) border-box;
+  background: linear-gradient(#fff) padding-box, linear-gradient(to top right, #5257e5, #56cfe1) border-box;
+  border: 1px solid transparent;
 }
 
 @media (max-width: 987px) {
@@ -940,55 +922,5 @@ footer .scrollToTop {
   footer nav p:nth-child(2) {
     height: 60px;
     margin: 10px 0;
-  }
-}
-.title {
-  -webkit-animation: slideLeft 0.4s;
-          animation: slideLeft 0.4s;
-}
-
-@-webkit-keyframes slideLeft {
-  from {
-    margin-left: 30%;
-  }
-  to {
-    margin-left: 0%;
-  }
-}
-
-@keyframes slideLeft {
-  from {
-    margin-left: 30%;
-  }
-  to {
-    margin-left: 0%;
-  }
-}
-.btn {
-  -webkit-animation: fadeIn 0.8s;
-          animation: fadeIn 0.8s;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
