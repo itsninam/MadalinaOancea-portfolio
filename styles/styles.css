@@ -608,7 +608,7 @@ header .titleContainer h1 .capitalizedText {
     height: 100vh;
     top: 0;
     padding-top: 80px;
-    opacity: 0.95;
+    opacity: 0.97;
   }
   header nav .navList::before {
     content: none;
@@ -620,7 +620,7 @@ header .titleContainer h1 .capitalizedText {
     font-size: 1.8rem;
   }
   header nav .navList a:hover, header nav .navList a:focus {
-    color: #495057;
+    color: #95d5b2;
   }
   header nav .socials {
     display: none;

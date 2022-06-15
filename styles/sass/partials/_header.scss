@@ -206,7 +206,7 @@ header {
         height: 100vh;
         top: 0;
         padding-top: 80px;
-        opacity: 0.95;
+        opacity: 0.97;
 
         &::before {
           content: none;
@@ -220,7 +220,7 @@ header {
 
           &:hover,
           &:focus {
-            color: $primary;
+            color: $tertiary;
           }
         }
       }
