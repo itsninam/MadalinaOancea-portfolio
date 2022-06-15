@@ -54,7 +54,7 @@ header {
 
         &:hover,
         &:focus {
-          color: $secondary;
+          text-decoration: underline;
         }
       }
     }
@@ -82,7 +82,7 @@ header {
 
         i {
           font-size: 1.1rem;
-          background: linear-gradient(10deg, $secondary, #95d5b2);
+          background: linear-gradient(10deg, $secondary, $tertiary);
           background-clip: text;
           -webkit-text-fill-color: transparent;
           transition: 0.2s;
@@ -138,10 +138,11 @@ header {
 
   .iconContainer {
     width: 70px;
+    text-align: center;
 
     i {
       font-size: 1.3rem;
-      background: linear-gradient(10deg, $secondary, #95d5b2);
+      background: linear-gradient(10deg, $secondary, $tertiary);
       background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
@@ -253,7 +254,6 @@ header {
       width: 90%;
       margin: 0 auto;
       font-size: 0.7rem;
-      text-align: center;
     }
   }
 }

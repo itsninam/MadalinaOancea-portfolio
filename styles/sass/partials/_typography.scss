@@ -6,8 +6,7 @@ html {
 body {
   font-family: $secondaryFont;
   font-size: $baseFontSize;
-  color: $primary;
-  // background-color: #fdf6f0;
+  color: $baseColour;
 }
 
 h1,
@@ -26,7 +25,7 @@ h1 {
   font-size: 3rem;
   line-height: 70px;
   transition: 0.3s;
-  color: #220901;
+  color: $baseColour;
 }
 
 h2 {
@@ -42,7 +41,7 @@ h2 {
 h3 {
   font-family: $primaryFont;
   margin-bottom: 10px;
-  color: #220901;
+  color: $baseColour;
 }
 
 ul,
@@ -53,9 +52,9 @@ li {
 }
 
 a {
+  font-family: $secondaryFont;
   font-size: 1rem;
   color: $primary;
-  font-family: $secondaryFont;
   letter-spacing: 1px;
   display: inline-block;
   text-decoration: none;
@@ -68,5 +67,4 @@ p {
   line-height: 32px;
   letter-spacing: 1px;
   margin-bottom: 20px;
-  color: #220901;
 }

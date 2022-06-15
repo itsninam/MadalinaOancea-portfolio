@@ -96,7 +96,7 @@
   font-weight: bolder;
 
   &:hover {
-    color: #95d5b2;
+    color: $tertiary;
   }
 }
 
@@ -110,7 +110,7 @@
 
   i {
     font-size: 1.3rem;
-    background: linear-gradient(10deg, $secondary, #95d5b2);
+    background: linear-gradient(10deg, $secondary, $tertiary);
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
