@@ -54,23 +54,6 @@ app.mobileMenu = () => {
   });
 };
 
-//animations created after watching youtube tutorial from Wes Bos
-const sliderImages = document.querySelectorAll(".slideIn");
-
-app.slideIn = (e) => {
-  sliderImages.forEach((image) => {
-    const slideInAt = window.scrollY + window.innerHeight - image.height / 2;
-    const imageBottom = image.offsetTop + image.height;
-    const ifHalfShown = slideInAt > image.offsetTop;
-    const isNotScrolledPast = window.scrollY < imageBottom;
-    if (ifHalfShown && isNotScrolledPast) {
-      image.classList.add("active");
-    } else {
-      image.classList.remove("active");
-    }
-  });
-};
-
 //clear form after submit, as per formspree.io documentation
 window.onbeforeunload = () => {
   for (const form of document.getElementsByTagName("form")) {

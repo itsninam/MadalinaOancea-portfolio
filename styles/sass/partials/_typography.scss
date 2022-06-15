@@ -4,11 +4,10 @@ html {
 }
 
 body {
-  font-family: $primaryFont;
+  font-family: $secondaryFont;
   font-size: $baseFontSize;
-  font-weight: 400;
   color: $primary;
-  font-size: 0.9rem;
+  // background-color: #fdf6f0;
 }
 
 h1,
@@ -24,23 +23,26 @@ input {
 
 h1 {
   font-family: $primaryFont;
-  font-size: 4.5rem;
-  font-weight: 300;
+  font-size: 3rem;
+  line-height: 70px;
   transition: 0.3s;
+  color: #220901;
 }
 
 h2 {
-  font-family: $tertiaryFont;
+  font-family: $primaryFont;
   font-size: 2rem;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  line-height: 60px;
+  margin-bottom: 20px;
   color: $secondary;
-  margin-bottom: 50px;
   transition: 0.3s;
 }
 
 h3 {
-  margin-bottom: 20px;
+  font-family: $primaryFont;
+  margin-bottom: 10px;
+  color: #220901;
 }
 
 ul,
@@ -53,6 +55,7 @@ li {
 a {
   font-size: 1rem;
   color: $primary;
+  font-family: $secondaryFont;
   letter-spacing: 1px;
   display: inline-block;
   text-decoration: none;
@@ -61,7 +64,9 @@ a {
 }
 
 p {
-  line-height: 25px;
-  letter-spacing: 1.3px;
+  font-family: $secondaryFont;
+  line-height: 32px;
+  letter-spacing: 1px;
   margin-bottom: 20px;
+  color: #220901;
 }

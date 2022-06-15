@@ -15,10 +15,6 @@
   align-items: center;
 }
 
-.reverse {
-  flex-direction: row-reverse;
-}
-
 section {
   padding: 50px 0;
 }
@@ -34,8 +30,8 @@ img {
   font-weight: 500;
   letter-spacing: 1px;
   padding: 8px 12px;
-  background: linear-gradient(#fff) padding-box,
-    linear-gradient(to top right, $secondary, #56cfe1) border-box;
+  background: linear-gradient(#fdf6f0) padding-box,
+    linear-gradient(to top right, $secondary, #95d5b2) border-box;
   border: 1px solid transparent;
   border-radius: 8px;
   color: $secondary;
@@ -51,7 +47,7 @@ img {
   &:focus:not(:focus-visible),
   &:active {
     background: linear-gradient(#fff) padding-box,
-      linear-gradient(to top right, $secondary, #56cfe1) border-box;
+      linear-gradient(to top right, $secondary, #95d5b2) border-box;
     border: 1px solid transparent;
     color: $secondary;
     transition: 0.1s;

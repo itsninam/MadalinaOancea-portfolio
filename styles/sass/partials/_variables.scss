@@ -1,8 +1,31 @@
-$primaryFont: "Poppins", sans-serif;
-$secondaryFont: "Noto Sans", sans-serif;
-$tertiaryFont: "Anton", sans-serif;
-$baseFontSize: 1rem;
+@font-face {
+  font-family: "Sometimes Times";
+  src: url("../../../fonts/sometimes-times/sometimes_times-webfont.woff2") format("woff2"),
+    url("../../../fonts/sometimes-times/sometimes_times-webfont.woff") format("woff");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Maison Neue Light";
+  src: url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.eot");
+  /* IE9*/
+  src: url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.woff2") format("woff2"),
+    /* chrome、firefox */
+    url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.woff") format("woff"),
+    /* chrome、firefox */
+    url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.svg#Maison Neue Light") format("svg");
+  /* iOS 4.1- */
+}
+
+$primaryFont: "Sometimes Times", sans-serif;
+$secondaryFont: "Maison Neue Light", sans-serif;
+$baseFontSize: 0.8rem;
 
 //colours
 $primary: #495057;
-$secondary: #5257e5;
+$secondary: #14746f;

@@ -1,16 +1,36 @@
 header {
-  background-image: url("../../../assets/background.jpg");
+  background-image: url("../../../assets/milad-fakurian-UqP7U400AZs-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   background-attachment: fixed;
-  height: 95vh;
+  height: 100vh;
+  position: relative;
+  z-index: 1000;
 
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f8edeb;
+    opacity: 0.5;
+    z-index: -10;
+  }
+
+  // navigation
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 20px;
+    z-index: 10000;
 
     .mobileMenu {
+      font-size: 10px;
       height: 0;
       width: auto;
       position: absolute;
@@ -30,7 +50,7 @@ header {
 
       a {
         padding: 25px 0 25px 50px;
-        text-transform: uppercase;
+        color: $secondary;
 
         &:hover,
         &:focus {
@@ -39,9 +59,11 @@ header {
       }
     }
 
+    // social icons
     .socials {
       position: fixed;
       bottom: 100px;
+      right: 0;
       z-index: 20;
       text-align: center;
       margin: 0 50px;
@@ -60,7 +82,7 @@ header {
 
         i {
           font-size: 1.1rem;
-          background: linear-gradient(10deg, $secondary, #72efdd);
+          background: linear-gradient(10deg, $secondary, #95d5b2);
           background-clip: text;
           -webkit-text-fill-color: transparent;
           transition: 0.2s;
@@ -74,38 +96,20 @@ header {
     }
   }
 
-  .title {
-    margin: 30vh 0;
-    width: 640px;
-    text-align: right;
-    position: relative;
+  .titleContainer {
+    margin: 35px 0;
+
 
     h1 {
-      .name {
-        font-family: $secondaryFont;
-        background: linear-gradient(10deg, $secondary, #72efdd);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+      .codes {
         letter-spacing: -5px;
-        position: relative;
-
-        &::after {
-          content: url(../../../assets/dot.png);
-          height: 5px;
-          width: 5px;
-          display: block;
-          position: absolute;
-          right: -15px;
-          top: 15px;
-        }
       }
-    }
 
-    .capitalize {
-      font-size: 2.8rem;
-      font-family: $secondaryFont;
-      text-transform: uppercase;
-      display: block;
+      .capitalizedText {
+        font-size: 2.3rem;
+        text-transform: uppercase;
+        display: block;
+      }
     }
   }
 
@@ -118,15 +122,49 @@ header {
   }
 }
 
-@media (max-width: 915px) {
-  header {
-    .title {
-      width: 100%;
+.textContainer {
+  width: 73%;
+  z-index: 1000;
+  transition: 0.5s;
 
-      .capitalize {
-        font-size: 2.2rem;
-      }
+
+}
+
+.skillsContainer {
+  width: 70%;
+
+
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .skillsList {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin: 0 auto;
+  }
+
+  .iconContainer {
+    text-align: center;
+
+    i {
+      padding: 0 30px;
+      font-size: 1.5rem;
+      background: linear-gradient(10deg, $secondary, #95d5b2);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
+  }
+}
+
+@media (max-width: 915px) {
+  .textContainer {
+    width: 100%;
+    font-size: 0.8rem;
   }
 }
 
@@ -139,12 +177,8 @@ header {
     nav {
       justify-content: flex-end;
 
-      .whiteBtn {
-        color: #fff;
-      }
-
       .mobileMenu {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 15px 0 15px 25px;
         position: absolute;
         margin-right: 40px;
@@ -153,6 +187,10 @@ header {
         position: static;
         overflow: visible;
         height: auto;
+      }
+
+      .whiteBtn {
+        color: #fff;
       }
 
       .hide {
@@ -174,7 +212,7 @@ header {
         background-color: $secondary;
         width: 100%;
         margin: 0 auto;
-        height: 95vh;
+        height: 100vh;
         top: 0;
         padding-top: 80px;
         opacity: 0.95;
@@ -195,6 +233,7 @@ header {
           }
         }
       }
+
       .socials {
         display: none;
 
@@ -204,44 +243,39 @@ header {
       }
     }
 
-    .title {
-      width: 100%;
-      margin-top: 25vh;
+    .titleContainer {
       text-align: center;
 
-      &::before {
-        top: -20px;
-      }
-
       h1 {
-        font-size: 3.2rem;
+        font-size: 2.3rem;
 
-        .name {
-          letter-spacing: -4.5px;
+        .capitalizedText {
+          font-size: 1.8rem;
         }
       }
+    }
 
-      .capitalize {
-        font-size: 1.5rem;
-      }
+    .skillsContainer {
+      width: 100%;
     }
   }
 }
 
 @media (max-width: 390px) {
   header {
-    .title {
+    .titleContainer {
       h1 {
-        font-size: 2.4rem;
+        font-size: 2rem;
+        line-height: 50px;
 
-        .name {
-          letter-spacing: -3px;
+        .capitalizedText {
+          font-size: 1.3rem;
         }
       }
+    }
 
-      .capitalize {
-        font-size: 1.2rem;
-      }
+    .textContainer {
+      font-size: 0.7rem;
     }
   }
 
