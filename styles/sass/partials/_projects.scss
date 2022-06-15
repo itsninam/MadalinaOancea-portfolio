@@ -14,20 +14,6 @@
   }
 }
 
-blockquote {
-  text-align: center;
-  width: 60%;
-  margin: 10px auto 10px auto;
-}
-
-blockquote::before {
-  content: "“";
-  font-size: 50px;
-  height: 20px;
-}
-
-
-
 .projectsContainer {
   display: flex;
   flex-wrap: wrap;
@@ -81,7 +67,6 @@ blockquote::before {
 
 .projectText {
   position: absolute;
-  background-color: #333;
   top: 0;
   height: 100%;
   display: flex;
@@ -91,12 +76,32 @@ blockquote::before {
   opacity: 0;
   transition: 0.5s;
   cursor: pointer;
+  background-color: #333;
+  border-radius: 8px;
 
   p {
     width: 90%;
     margin: 0 auto;
     color: #fff;
   }
+}
+
+.closeInfo {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bolder;
+
+  &:hover {
+    color: #95d5b2;
+  }
+}
+
+.showProjectText {
+  opacity: 1;
 }
 
 .iconsContainer {
@@ -119,13 +124,6 @@ blockquote::before {
   text-align: center;
 }
 
-
-
-.projectContent:hover .projectText,
-.projectContent:active .projectText,
-.projectContent:focus .projectText {
-  opacity: 1;
-}
 
 @media (max-width: 750px) {
   .projectLinks {

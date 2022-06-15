@@ -30,9 +30,11 @@ img {
   font-weight: 500;
   letter-spacing: 1px;
   padding: 8px 12px;
-  background: linear-gradient(#fdf6f0) padding-box,
-    linear-gradient(to top right, $secondary, #95d5b2) border-box;
-  border: 1px solid transparent;
+  // background: linear-gradient(#fdf6f0) padding-box,
+  //   linear-gradient(to top right, $secondary, #95d5b2) border-box;
+  // border: 1px solid transparent;
+  background-color: #fff;
+  border: none;
   border-radius: 8px;
   color: $secondary;
   transition: 0.5s;

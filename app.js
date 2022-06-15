@@ -84,7 +84,13 @@ app.seeMoreLess = () => {
 };
 
 app.projectsHover = () => {
-  const projects = document.querySelectorAll("");
+  const projects = document.querySelectorAll(".projectText");
+
+  projects.forEach((project) =>
+    project.addEventListener("click", () => {
+      project.classList.toggle("showProjectText");
+    })
+  );
 };
 
 app.init = () => {
@@ -92,7 +98,8 @@ app.init = () => {
   app.displayWord();
   app.displayDay();
   app.mobileMenu();
-  app.seeMoreLess();
+  // app.seeMoreLess();
+  app.projectsHover();
 };
 
 app.init();

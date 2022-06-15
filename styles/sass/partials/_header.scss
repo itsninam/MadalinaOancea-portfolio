@@ -4,7 +4,8 @@ header {
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  min-height: 95vh;
+  height: auto;
   position: relative;
   z-index: 1000;
 
@@ -101,7 +102,7 @@ header {
 
     h1 {
       .codes {
-        letter-spacing: -5px;
+        letter-spacing: -4px;
       }
 
       .capitalizedText {
@@ -134,11 +135,12 @@ header {
   h2 {
     font-size: 1rem;
     margin-bottom: 5px;
+    color: #220901;
   }
 
   .skillsList {
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-size: 0.7rem;
     font-weight: 500;
     margin: 0 auto;
@@ -146,10 +148,10 @@ header {
 
   .iconContainer {
     text-align: center;
+    padding-right: 30px;
 
     i {
-      padding: 0 30px;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       background: linear-gradient(10deg, $secondary, #95d5b2);
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -243,11 +245,13 @@ header {
     .titleContainer {
       text-align: center;
 
+
       h1 {
-        font-size: 2.3rem;
+        font-size: 2.4rem;
+        line-height: 50px;
 
         .capitalizedText {
-          font-size: 1.8rem;
+          font-size: 1.7rem;
         }
       }
     }

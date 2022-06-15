@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -310,7 +309,7 @@ h2 {
   font-size: 2rem;
   letter-spacing: 2px;
   line-height: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   color: #14746f;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -387,9 +386,8 @@ img {
   font-weight: 500;
   letter-spacing: 1px;
   padding: 8px 12px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fdf6f0)) padding-box, -webkit-gradient(linear, left bottom, right top, from(#14746f), to(#95d5b2)) border-box;
-  background: linear-gradient(#fdf6f0) padding-box, linear-gradient(to top right, #14746f, #95d5b2) border-box;
-  border: 1px solid transparent;
+  background-color: #fff;
+  border: none;
   border-radius: 8px;
   color: #14746f;
   -webkit-transition: 0.5s;
@@ -415,7 +413,8 @@ header {
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  min-height: 95vh;
+  height: auto;
   position: relative;
   z-index: 1000;
 }
@@ -510,7 +509,7 @@ header .titleContainer {
   margin: 35px 0;
 }
 header .titleContainer h1 .codes {
-  letter-spacing: -5px;
+  letter-spacing: -4px;
 }
 header .titleContainer h1 .capitalizedText {
   font-size: 2.3rem;
@@ -531,23 +530,24 @@ header .titleContainer h1 .capitalizedText {
 .skillsContainer h2 {
   font-size: 1rem;
   margin-bottom: 5px;
+  color: #220901;
 }
 .skillsContainer .skillsList {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 0.7rem;
   font-weight: 500;
   margin: 0 auto;
 }
 .skillsContainer .iconContainer {
   text-align: center;
+  padding-right: 30px;
 }
 .skillsContainer .iconContainer i {
-  padding: 0 30px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   background: linear-gradient(10deg, #14746f, #95d5b2);
   -webkit-background-clip: text;
           background-clip: text;
@@ -637,10 +637,11 @@ header .titleContainer h1 .capitalizedText {
     text-align: center;
   }
   header .titleContainer h1 {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
+    line-height: 50px;
   }
   header .titleContainer h1 .capitalizedText {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
   header .skillsContainer {
     width: 100%;
@@ -681,18 +682,6 @@ header .titleContainer h1 .capitalizedText {
   width: 10px;
   left: 0;
   top: 20px;
-}
-
-blockquote {
-  text-align: center;
-  width: 60%;
-  margin: 10px auto 10px auto;
-}
-
-blockquote::before {
-  content: "“";
-  font-size: 50px;
-  height: 20px;
 }
 
 .projectsContainer {
@@ -748,7 +737,6 @@ blockquote::before {
 
 .projectText {
   position: absolute;
-  background-color: #333;
   top: 0;
   height: 100%;
   display: -webkit-box;
@@ -768,11 +756,30 @@ blockquote::before {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
+  background-color: #333;
+  border-radius: 8px;
 }
 .projectText p {
   width: 90%;
   margin: 0 auto;
   color: #fff;
+}
+
+.closeInfo {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.closeInfo:hover {
+  color: #95d5b2;
+}
+
+.showProjectText {
+  opacity: 1;
 }
 
 .iconsContainer {
@@ -799,12 +806,6 @@ blockquote::before {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-
-.projectContent:hover .projectText,
-.projectContent:active .projectText,
-.projectContent:focus .projectText {
-  opacity: 1;
 }
 
 @media (max-width: 750px) {
