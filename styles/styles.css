@@ -421,7 +421,6 @@ header {
 }
 header::after {
   content: "";
-  display: block;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -517,13 +516,6 @@ header .titleContainer h1 .capitalizedText {
   font-size: 2.3rem;
   text-transform: uppercase;
   display: block;
-}
-header .btn {
-  margin-top: 50px;
-  padding: 12px;
-  border: 2px solid transparent;
-  cursor: pointer;
-  position: relative;
 }
 
 .textContainer {
@@ -654,7 +646,7 @@ header .btn {
     width: 100%;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 430px) {
   header .titleContainer h1 {
     font-size: 2rem;
     line-height: 50px;
@@ -668,6 +660,15 @@ header .btn {
 
   h4 {
     font-size: 0.7rem;
+  }
+}
+@media (max-width: 320px) {
+  header .titleContainer h1 {
+    font-size: 1.9rem;
+    line-height: 50px;
+  }
+  header .titleContainer h1 .capitalizedText {
+    font-size: 1.2rem;
   }
 }
 .portfolio h2 {
@@ -694,12 +695,6 @@ blockquote::before {
   height: 20px;
 }
 
-@supports (hanging-punctuation: first) {
-  blockquote {
-    text-indent: 0;
-    hanging-punctuation: first;
-  }
-}
 .projectsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -708,6 +703,7 @@ blockquote::before {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  overflow-x: hidden;
 }
 .projectsContainer .projectContainer {
   margin-bottom: 40px;
@@ -805,11 +801,13 @@ blockquote::before {
   text-align: center;
 }
 
-.projectContent:hover .projectText {
+.projectContent:hover .projectText,
+.projectContent:active .projectText,
+.projectContent:focus .projectText {
   opacity: 1;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 750px) {
   .projectLinks {
     width: 70%;
   }

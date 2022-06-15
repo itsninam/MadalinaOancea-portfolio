@@ -26,24 +26,17 @@ blockquote::before {
   height: 20px;
 }
 
-@supports (hanging-punctuation: first) {
-  blockquote {
-    text-indent: 0;
-    hanging-punctuation: first;
-  }
-}
-
 
 
 .projectsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  overflow-x: hidden;
 
   .projectContainer {
     margin-bottom: 40px;
   }
-
 
   :nth-child(1) .projectContent {
     background-color: #f8edeb;
@@ -128,11 +121,13 @@ blockquote::before {
 
 
 
-.projectContent:hover .projectText {
+.projectContent:hover .projectText,
+.projectContent:active .projectText,
+.projectContent:focus .projectText {
   opacity: 1;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 750px) {
   .projectLinks {
     width: 70%;
 

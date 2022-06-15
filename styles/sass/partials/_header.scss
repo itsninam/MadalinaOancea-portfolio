@@ -10,7 +10,6 @@ header {
 
   &::after {
     content: "";
-    display: block;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -113,21 +112,19 @@ header {
     }
   }
 
-  .btn {
-    margin-top: 50px;
-    padding: 12px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    position: relative;
-  }
+  // .btn {
+  //   margin-top: 50px;
+  //   padding: 12px;
+  //   border: 2px solid transparent;
+  //   cursor: pointer;
+  //   position: relative;
+  // }
 }
 
 .textContainer {
   width: 73%;
   z-index: 1000;
   transition: 0.5s;
-
-
 }
 
 .skillsContainer {
@@ -261,7 +258,7 @@ header {
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 430px) {
   header {
     .titleContainer {
       h1 {
@@ -281,5 +278,20 @@ header {
 
   h4 {
     font-size: 0.7rem;
+  }
+}
+
+@media(max-width: 320px) {
+  header {
+    .titleContainer {
+      h1 {
+        font-size: 1.9rem;
+        line-height: 50px;
+
+        .capitalizedText {
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
 }

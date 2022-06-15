@@ -83,6 +83,10 @@ app.seeMoreLess = () => {
   });
 };
 
+app.projectsHover = () => {
+  const projects = document.querySelectorAll("");
+};
+
 app.init = () => {
   window.addEventListener("scroll", app.slideIn);
   app.displayWord();
