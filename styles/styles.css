@@ -691,12 +691,16 @@ header .titleContainer h1 .capitalizedText {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   overflow-x: hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 .projectsContainer .projectContainer {
   margin-bottom: 40px;
 }
 .projectsContainer :nth-child(1) .projectContent {
-  background-color: #f8edeb;
+  background-color: #ffecee;
 }
 .projectsContainer :nth-child(2) .projectContent {
   background-color: #edf2fb;
@@ -712,6 +716,10 @@ header .titleContainer h1 .capitalizedText {
 }
 .projectsContainer :nth-child(6) .projectContent {
   background-color: #ffecee;
+  background-color: #f8edeb;
+}
+.projectsContainer :nth-child(7) .projectContent {
+  background-color: #d3eeec;
 }
 .projectsContainer .projectContent {
   max-width: 450px;
