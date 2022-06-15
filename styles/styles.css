@@ -715,11 +715,11 @@ header .titleContainer h1 .capitalizedText {
   background-color: #ffffe0;
 }
 .projectsContainer :nth-child(6) .projectContent {
-  background-color: #ffecee;
-  background-color: #f8edeb;
+  background-color: #d3eeec;
+  background-color: #edf2fb;
 }
 .projectsContainer :nth-child(7) .projectContent {
-  background-color: #d3eeec;
+  background-color: #f8edeb;
 }
 .projectsContainer .projectContent {
   max-width: 450px;
