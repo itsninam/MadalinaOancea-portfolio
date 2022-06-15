@@ -524,9 +524,6 @@ header .titleContainer h1 .capitalizedText {
   transition: 0.5s;
 }
 
-.skillsContainer {
-  width: 70%;
-}
 .skillsContainer h2 {
   font-size: 1rem;
   margin-bottom: 5px;
@@ -539,12 +536,10 @@ header .titleContainer h1 .capitalizedText {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 0.7rem;
-  font-weight: 500;
-  margin: 0 auto;
+  width: 70%;
 }
 .skillsContainer .iconContainer {
-  text-align: center;
-  padding-right: 30px;
+  width: 70px;
 }
 .skillsContainer .iconContainer i {
   font-size: 1.3rem;
@@ -643,8 +638,12 @@ header .titleContainer h1 .capitalizedText {
   header .titleContainer h1 .capitalizedText {
     font-size: 1.7rem;
   }
-  header .skillsContainer {
-    width: 100%;
+
+  .skillsContainer .skillsList {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.7rem;
+    text-align: center;
   }
 }
 @media (max-width: 430px) {

@@ -21,7 +21,7 @@ header {
     z-index: -10;
   }
 
-  // navigation
+  // nav links
   nav {
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@ header {
       }
     }
 
-    // social icons
+    // social icons (side)
     .socials {
       position: fixed;
       bottom: 100px;
@@ -96,9 +96,9 @@ header {
     }
   }
 
+  //title
   .titleContainer {
     margin: 35px 0;
-
 
     h1 {
       .codes {
@@ -112,26 +112,17 @@ header {
       }
     }
   }
-
-  // .btn {
-  //   margin-top: 50px;
-  //   padding: 12px;
-  //   border: 2px solid transparent;
-  //   cursor: pointer;
-  //   position: relative;
-  // }
 }
 
+//homepage info
 .textContainer {
   width: 73%;
   z-index: 1000;
   transition: 0.5s;
 }
 
+//skills list
 .skillsContainer {
-  width: 70%;
-
-
   h2 {
     font-size: 1rem;
     margin-bottom: 5px;
@@ -142,13 +133,11 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 0.7rem;
-    font-weight: 500;
-    margin: 0 auto;
+    width: 70%;
   }
 
   .iconContainer {
-    text-align: center;
-    padding-right: 30px;
+    width: 70px;
 
     i {
       font-size: 1.3rem;
@@ -160,6 +149,8 @@ header {
   }
 }
 
+
+//media queries
 @media (max-width: 915px) {
   .textContainer {
     width: 100%;
@@ -255,9 +246,14 @@ header {
         }
       }
     }
+  }
 
-    .skillsContainer {
-      width: 100%;
+  .skillsContainer {
+    .skillsList {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 0.7rem;
+      text-align: center;
     }
   }
 }
@@ -283,6 +279,8 @@ header {
   h4 {
     font-size: 0.7rem;
   }
+
+
 }
 
 @media(max-width: 320px) {
