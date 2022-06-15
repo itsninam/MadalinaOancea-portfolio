@@ -260,17 +260,28 @@ html {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: "Sometimes Times";
+  src: url("../../../fonts/sometimes-times/sometimes_times-webfont.woff2") format("woff2"), url("../../../fonts/sometimes-times/sometimes_times-webfont.woff") format("woff");
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Maison Neue Light";
+  src: url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.eot");
+  /* IE9*/
+  src: url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.eot?#iefix") format("embedded-opentype"), url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.woff2") format("woff2"), url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.woff") format("woff"), url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.ttf") format("truetype"), url("../../../fonts/maison-neue/8b59d4b47037b08d452d8cb659cc2d53.svg#Maison Neue Light") format("svg");
+  /* iOS 4.1- */
+}
 html {
   font-size: 125%;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #495057;
-  font-size: 0.9rem;
+  font-family: "Maison Neue Light", sans-serif;
+  font-size: 0.8rem;
+  color: #220901;
 }
 
 h1,
@@ -285,26 +296,29 @@ input {
 }
 
 h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 4.5rem;
-  font-weight: 300;
+  font-family: "Sometimes Times", sans-serif;
+  font-size: 3rem;
+  line-height: 70px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  color: #220901;
 }
 
 h2 {
-  font-family: "Anton", sans-serif;
+  font-family: "Sometimes Times", sans-serif;
   font-size: 2rem;
   letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #5257e5;
+  line-height: 60px;
   margin-bottom: 50px;
+  color: #14746f;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 h3 {
-  margin-bottom: 20px;
+  font-family: "Sometimes Times", sans-serif;
+  margin-bottom: 10px;
+  color: #220901;
 }
 
 ul,
@@ -315,6 +329,7 @@ li {
 }
 
 a {
+  font-family: "Maison Neue Light", sans-serif;
   font-size: 1rem;
   color: #495057;
   letter-spacing: 1px;
@@ -326,8 +341,9 @@ a {
 }
 
 p {
-  line-height: 25px;
-  letter-spacing: 1.3px;
+  font-family: "Maison Neue Light", sans-serif;
+  line-height: 32px;
+  letter-spacing: 1px;
   margin-bottom: 20px;
 }
 
@@ -354,13 +370,6 @@ p {
           align-items: center;
 }
 
-.reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
 section {
   padding: 50px 0;
 }
@@ -376,34 +385,48 @@ img {
   font-weight: 500;
   letter-spacing: 1px;
   padding: 8px 12px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff)) padding-box, -webkit-gradient(linear, left bottom, right top, from(#5257e5), to(#56cfe1)) border-box;
-  background: linear-gradient(#fff) padding-box, linear-gradient(to top right, #5257e5, #56cfe1) border-box;
-  border: 1px solid transparent;
+  background-color: #fff;
+  border: none;
   border-radius: 8px;
-  color: #5257e5;
+  color: #14746f;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
 }
 .btn:focus, .btn:hover {
-  background: #5257e5;
+  background: #14746f;
   color: #fff;
 }
 .btn:focus:not(:focus-visible), .btn:active {
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff)) padding-box, -webkit-gradient(linear, left bottom, right top, from(#5257e5), to(#56cfe1)) border-box;
-  background: linear-gradient(#fff) padding-box, linear-gradient(to top right, #5257e5, #56cfe1) border-box;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff)) padding-box, -webkit-gradient(linear, left bottom, right top, from(#14746f), to(#95d5b2)) border-box;
+  background: linear-gradient(#fff) padding-box, linear-gradient(to top right, #14746f, #95d5b2) border-box;
   border: 1px solid transparent;
-  color: #5257e5;
+  color: #14746f;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
 
 header {
-  background-image: url("../../../assets/background.jpg");
+  background-image: url("../../../assets/milad-fakurian-UqP7U400AZs-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   background-attachment: fixed;
-  height: 95vh;
+  min-height: 95vh;
+  height: auto;
+  position: relative;
+  z-index: 1000;
+}
+header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #f8edeb;
+  opacity: 0.5;
+  z-index: -10;
 }
 header nav {
   display: -webkit-box;
@@ -415,8 +438,11 @@ header nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 20px;
+  z-index: 10000;
 }
 header nav .mobileMenu {
+  font-size: 10px;
   height: 0;
   width: auto;
   position: absolute;
@@ -424,7 +450,7 @@ header nav .mobileMenu {
   overflow: hidden;
   background: none;
   border: none;
-  color: #5257e5;
+  color: #14746f;
 }
 header nav .navList {
   display: -webkit-box;
@@ -441,14 +467,15 @@ header nav .navList {
 }
 header nav .navList a {
   padding: 25px 0 25px 50px;
-  text-transform: uppercase;
+  color: #14746f;
 }
 header nav .navList a:hover, header nav .navList a:focus {
-  color: #5257e5;
+  text-decoration: underline;
 }
 header nav .socials {
   position: fixed;
   bottom: 100px;
+  right: 0;
   z-index: 20;
   text-align: center;
   margin: 0 50px;
@@ -458,7 +485,7 @@ header nav .socials::after {
   width: 0;
   height: 50%;
   position: absolute;
-  border-left: 1px solid #5257e5;
+  border-left: 1px solid #14746f;
   top: 220px;
 }
 header nav .socials a {
@@ -466,7 +493,7 @@ header nav .socials a {
 }
 header nav .socials a i {
   font-size: 1.1rem;
-  background: linear-gradient(10deg, #5257e5, #72efdd);
+  background: linear-gradient(10deg, #14746f, #95d5b2);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -477,50 +504,56 @@ header nav .socials a:hover, header nav .socials a:focus {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
-header .title {
-  margin: 30vh 0;
-  width: 640px;
-  text-align: right;
-  position: relative;
+header .titleContainer {
+  margin: 35px 0;
 }
-header .title h1 .name {
-  font-family: "Noto Sans", sans-serif;
-  background: linear-gradient(10deg, #5257e5, #72efdd);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -5px;
-  position: relative;
+header .titleContainer h1 .codes {
+  letter-spacing: -4px;
 }
-header .title h1 .name::after {
-  content: url(../../../assets/dot.png);
-  height: 5px;
-  width: 5px;
-  display: block;
-  position: absolute;
-  right: -15px;
-  top: 15px;
-}
-header .title .capitalize {
-  font-size: 2.8rem;
-  font-family: "Noto Sans", sans-serif;
+header .titleContainer h1 .capitalizedText {
+  font-size: 2.3rem;
   text-transform: uppercase;
   display: block;
 }
-header .btn {
-  margin-top: 50px;
-  padding: 12px;
-  border: 2px solid transparent;
-  cursor: pointer;
-  position: relative;
+
+.textContainer {
+  width: 73%;
+  z-index: 1000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.skillsContainer h2 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #220901;
+}
+.skillsContainer .skillsList {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0.7rem;
+  width: 70%;
+}
+.skillsContainer .iconContainer {
+  width: 70px;
+  text-align: center;
+}
+.skillsContainer .iconContainer i {
+  font-size: 1.3rem;
+  background: linear-gradient(10deg, #14746f, #95d5b2);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 @media (max-width: 915px) {
-  header .title {
+  .textContainer {
     width: 100%;
-  }
-  header .title .capitalize {
-    font-size: 2.2rem;
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 750px) {
@@ -533,11 +566,8 @@ header .btn {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  header nav .whiteBtn {
-    color: #fff;
-  }
   header nav .mobileMenu {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 15px 0 15px 25px;
     position: absolute;
     margin-right: 40px;
@@ -546,6 +576,9 @@ header .btn {
     position: static;
     overflow: visible;
     height: auto;
+  }
+  header nav .whiteBtn {
+    color: #fff;
   }
   header nav .hide {
     position: absolute;
@@ -569,13 +602,13 @@ header .btn {
         -ms-flex-align: end;
             align-items: flex-end;
     position: absolute;
-    background-color: #5257e5;
+    background-color: #14746f;
     width: 100%;
     margin: 0 auto;
-    height: 95vh;
+    height: 100vh;
     top: 0;
     padding-top: 80px;
-    opacity: 0.95;
+    opacity: 0.97;
   }
   header nav .navList::before {
     content: none;
@@ -587,7 +620,7 @@ header .btn {
     font-size: 1.8rem;
   }
   header nav .navList a:hover, header nav .navList a:focus {
-    color: #495057;
+    color: #95d5b2;
   }
   header nav .socials {
     display: none;
@@ -595,142 +628,52 @@ header .btn {
   header nav .socials::after {
     content: none;
   }
-  header .title {
-    width: 100%;
-    margin-top: 25vh;
+  header .titleContainer {
     text-align: center;
   }
-  header .title::before {
-    top: -20px;
+  header .titleContainer h1 {
+    font-size: 2.4rem;
+    line-height: 50px;
   }
-  header .title h1 {
-    font-size: 3.2rem;
+  header .titleContainer h1 .capitalizedText {
+    font-size: 1.7rem;
   }
-  header .title h1 .name {
-    letter-spacing: -4.5px;
-  }
-  header .title .capitalize {
-    font-size: 1.5rem;
+
+  .skillsContainer .skillsList {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.7rem;
   }
 }
-@media (max-width: 390px) {
-  header .title h1 {
-    font-size: 2.4rem;
+@media (max-width: 430px) {
+  header .titleContainer h1 {
+    font-size: 2rem;
+    line-height: 50px;
   }
-  header .title h1 .name {
-    letter-spacing: -3px;
+  header .titleContainer h1 .capitalizedText {
+    font-size: 1.3rem;
   }
-  header .title .capitalize {
-    font-size: 1.2rem;
+  header .textContainer {
+    font-size: 0.7rem;
   }
 
   h4 {
     font-size: 0.7rem;
   }
 }
-.about {
-  position: relative;
-  z-index: 10;
-}
-.about h2 {
-  text-align: right;
-  position: relative;
-}
-.about h2::after {
-  content: url(../../../assets/line.png);
-  position: absolute;
-  height: 10px;
-  width: 10px;
-  right: 26px;
-  top: 20px;
-}
-.about .textContainer {
-  text-align: center;
-  width: 85%;
-  margin: 0 auto 40px auto;
-}
-.about .textContainer .skillsList {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  font-size: 0.7rem;
-  font-weight: 500;
-  margin: 0 auto;
-}
-.about .textContainer .iconContainer {
-  text-align: center;
-  margin: 0 10px;
-}
-.about .textContainer .iconContainer i {
-  padding: 10px 20px;
-  font-size: 1.5rem;
-  color: #5257e5;
-  display: inline-block;
-}
-.about .textContainer .iconContainer p {
-  margin: 0;
-}
-.about .bottomContent {
-  text-align: center;
-  margin: 0 auto;
-}
-.about .bottomContent img {
-  border-radius: 10px;
-  margin: 15px auto;
-}
-.about .interests {
-  margin: 0 auto;
-  max-width: 400px;
-  width: 100%;
-}
-.about .interests .flexContainer {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.about .interests h4 {
-  margin-right: 20px;
-  font-weight: 400;
-}
-.about .interests .iconContainer {
-  padding: 6px 8px;
-  margin-right: 20px;
-  border-style: solid;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff)) padding-box, -webkit-gradient(linear, left bottom, right top, from(#5257e5), to(#72efdd)) border-box;
-  background: linear-gradient(#fff) padding-box, linear-gradient(to top right, #5257e5, #72efdd) border-box;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  color: #5257e5;
-}
-.about .interests .adjust {
-  padding: 5px 10.5px;
-  font-size: 1.01rem;
-}
-
-@media (max-width: 550px) {
-  .about .textContainer {
-    width: 100%;
+@media (max-width: 320px) {
+  header .titleContainer h1 {
+    font-size: 1.9rem;
+    line-height: 50px;
   }
-  .about .textContainer .iconContainer i {
-    padding: 10px 13px;
+  header .titleContainer h1 .capitalizedText {
+    font-size: 1.2rem;
   }
-}
-.portfolio {
-  position: relative;
-}
-.portfolio .alignMiddle {
-  text-align: center;
 }
 .portfolio h2 {
   position: relative;
-  display: inline-block;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
-.portfolio h2::before {
+.portfolio h2::after {
   content: url(../../../assets/line.png);
   position: absolute;
   height: 10px;
@@ -738,75 +681,134 @@ header .btn {
   left: 0;
   top: 20px;
 }
-.portfolio .projectContainer {
-  margin-bottom: 80px;
+
+.projectsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow-x: hidden;
 }
-.portfolio .textContainer {
-  width: calc(50% - 40px);
-  margin: 0 20px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+.projectsContainer .projectContainer {
+  margin-bottom: 40px;
 }
-.portfolio .alignRight {
-  text-align: right;
-  margin-left: auto;
+.projectsContainer :nth-child(1) .projectContent {
+  background-color: #f8edeb;
 }
-.portfolio .imgContainer {
-  margin: 0 20px;
-  width: calc(50% - 40px);
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+.projectsContainer :nth-child(2) .projectContent {
+  background-color: #edf2fb;
 }
-.portfolio .imgContainer img {
-  border-radius: 10px;
-  -webkit-box-shadow: 11px 14px 15px -3px rgba(0, 0, 0, 0.1);
-          box-shadow: 11px 14px 15px -3px rgba(0, 0, 0, 0.1);
+.projectsContainer :nth-child(3) .projectContent {
+  background-color: #f2ebfb;
 }
-.portfolio .projectIcon {
-  width: 30%;
-  margin-bottom: 20px;
+.projectsContainer :nth-child(4) .projectContent {
+  background-color: #dbe7e4;
 }
-.portfolio .projectIcon i {
-  font-size: 1rem;
+.projectsContainer :nth-child(5) .projectContent {
+  background-color: #ffffe0;
 }
-.portfolio .wrapper.collapsed > .seeMoreItem {
-  position: absolute;
-  top: -5000px;
+.projectsContainer :nth-child(6) .projectContent {
+  background-color: #ffecee;
 }
-.portfolio .wrapper.expanded > .seeMoreBtn {
-  position: absolute;
-  left: -50000px;
+.projectsContainer .projectContent {
+  max-width: 450px;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
 }
-.portfolio .seeMoreBtn,
-.portfolio .seeLessBtn {
-  margin: 0 auto;
-  display: block;
-}
-.portfolio .seeMoreBtn {
-  background: #5257e5;
-  color: #fff;
-}
-.portfolio .seeMoreBtn:hover, .portfolio .seeMoreBtn:focus {
-  color: #5257e5;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff)) padding-box, -webkit-gradient(linear, left bottom, right top, from(#5257e5), to(#56cfe1)) border-box;
-  background: linear-gradient(#fff) padding-box, linear-gradient(to top right, #5257e5, #56cfe1) border-box;
-  border: 1px solid transparent;
+.projectsContainer .projectContent .imgContainers {
+  width: 80%;
 }
 
-@media (max-width: 987px) {
-  .projectContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  .projectContainer .textContainer,
-.projectContainer .imgContainer {
-    width: 100%;
-    margin: 0;
-  }
-  .projectContainer .imgContainer {
-    margin-bottom: 20px;
+.projectText {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: #333;
+  border-radius: 8px;
+}
+.projectText p {
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.closeInfo {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.closeInfo:hover {
+  color: #95d5b2;
+}
+
+.showProjectText {
+  opacity: 1;
+}
+
+.iconsContainer {
+  width: 50%;
+  margin: 30px 0;
+}
+.iconsContainer i {
+  font-size: 1.3rem;
+  background: linear-gradient(10deg, #14746f, #95d5b2);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projectLinks {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .projectLinks {
+    width: 70%;
   }
 }
 footer {
@@ -831,7 +833,7 @@ footer nav p {
   font-size: 0.85rem;
 }
 footer nav .randomWord {
-  color: #5257e5;
+  color: #14746f;
 }
 footer .socials {
   display: -webkit-box;
@@ -853,7 +855,7 @@ footer .socials::after {
 }
 footer .socials a {
   font-size: 1.4rem;
-  color: #5257e5;
+  color: #14746f;
   padding: 10px;
 }
 footer .socials a:hover, footer .socials a:focus {
@@ -870,7 +872,7 @@ footer form input {
   padding: 15px;
   background-image: url(../../../assets/background.jpg);
   border: none;
-  border-bottom: 2px solid #5257e5;
+  border-bottom: 2px solid #14746f;
 }
 footer form input[type=text] {
   margin-right: 20px;
@@ -882,7 +884,7 @@ footer form textarea {
   padding: 15px;
   resize: none;
   background-image: url(../../../assets/background.jpg);
-  border: 2px solid #5257e5;
+  border: 2px solid #14746f;
 }
 footer form button {
   display: block;
