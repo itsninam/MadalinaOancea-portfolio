@@ -605,7 +605,7 @@ header .titleContainer h1 .capitalizedText {
     background-color: #14746f;
     width: 100%;
     margin: 0 auto;
-    height: 100vh;
+    height: 100%;
     top: 0;
     padding-top: 80px;
     opacity: 0.97;
