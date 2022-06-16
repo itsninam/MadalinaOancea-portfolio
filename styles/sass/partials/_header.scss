@@ -52,6 +52,7 @@ header {
         padding: 25px 0 25px 50px;
         color: $secondary;
 
+
         &:hover,
         &:focus {
           text-decoration: underline;
@@ -251,7 +252,7 @@ header {
 
   .skillsContainer {
     .skillsList {
-      width: 90%;
+      width: 80%;
       margin: 0 auto;
       font-size: 0.7rem;
     }
