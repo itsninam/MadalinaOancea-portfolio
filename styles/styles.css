@@ -822,6 +822,11 @@ header .titleContainer h1 .capitalizedText {
   .projectLinks {
     width: 70%;
   }
+
+  .projectContainer .projectContent:hover, .projectContainer .projectContent:focus {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
 }
 footer {
   padding: 50px 0;

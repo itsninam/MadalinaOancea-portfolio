@@ -148,4 +148,14 @@
     width: 70%;
 
   }
+
+  .projectContainer {
+    .projectContent {
+
+      &:hover,
+      &:focus {
+        transform: scale(1.01);
+      }
+    }
+  }
 }
