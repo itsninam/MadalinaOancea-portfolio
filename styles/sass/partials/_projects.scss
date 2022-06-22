@@ -67,6 +67,11 @@
     position: relative;
     text-align: center;
 
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+
 
 
     .imgContainers {

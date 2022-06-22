@@ -737,6 +737,10 @@ header .titleContainer h1 .capitalizedText {
   position: relative;
   text-align: center;
 }
+.projectsContainer .projectContent:hover, .projectsContainer .projectContent:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
 .projectsContainer .projectContent .imgContainers {
   width: 80%;
 }
